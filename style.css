@@ -774,10 +774,11 @@ select:focus {
 	  display: flex;
   align-items: center;
   justify-content: flex-start; /* align items to the left */
+  }
   .site-header {
   height: 6rem;
   }
-  }
+
 }
 
 @media (max-width: 480px) {
