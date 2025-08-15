@@ -22,14 +22,15 @@ title: About
 <meta property="og:image" content="https://yourwebsite.com/preview-image.png">
 <meta property="og:url" content="https://goatzy.games">
 <style>
-body {
+/*body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 20px;
   background: #111;
   color: #eee;
   line-height: 1.6;
 }
-
+*/
+/*
 .container:not(.header-container) {
   max-width: 900px;
   margin: auto;
@@ -39,6 +40,7 @@ body {
   box-shadow: 0 8px 20px rgba(0,0,0,0.6);
   border: 1px solid #2a2a2a;
 }
+*/
 
 .title {
   display: flex;
@@ -111,42 +113,6 @@ iframe {
   color: #a0e68c;
 }
 
-.site-header {
-  position: sticky;
-  top: 0;
-  background-color: rgba(17, 17, 17, 0.95);
-  backdrop-filter: saturate(180%) blur(12px);
-  border: 2px solid transparent;
-  border-radius: 12px;
-  margin: 10px auto; /* center horizontally */
-  padding: 0 20px; /* keep inner spacing */
-  width: calc(100% - 40px); /* keep 20px margin on each side */
-  max-width: 1400px; /* optional, matches PC width */
-  z-index: 999;
-  transition:
-    border-color 0.3s ease,
-    box-shadow 0.3s ease,
-    background-color 0.3s ease;
-  box-shadow:
-    0 -2px 6px rgba(119, 221, 119, 0.12),
-    0 0 10px rgba(0,0,0,0.3);
-  display: flex;
-  align-items: center;
-  height: 7rem;
-  justify-content: center;
-}
-
-
-/* When scrolled, strengthen outline and keep top highlight */
-.site-header.scrolled {
-  border-color: #77dd77;
-  box-shadow:
-    0 -3px 8px rgba(119, 221, 119, 0.25), /* stronger faint green top shadow */
-    0 4px 15px rgba(119, 221, 119, 0.6);
-  background-color: rgba(20, 20, 20, 0.85);
-}
-
-
 </style>
 </head>
 <body>
@@ -195,7 +161,6 @@ iframe {
   } else {
     const container = document.getElementById("projectContent");
 
-    // Initial main image (first in the list or placeholder)
     let mainImage = project.images.length ? project.images[0] : "";
 
     container.innerHTML = `
@@ -212,23 +177,27 @@ iframe {
       ` : ""}
       ${project.videoUrl ? `<iframe src="${project.videoUrl}" frameborder="0" allowfullscreen></iframe>` : ""}
       <div class="description">${project.description}</div>
-	  ${project.downloadUrl ? `<p><a href="${project.downloadUrl}" download class="download-link" target="_blank">⬇ Download / Open</a></p>` : ""}
-
+      ${project.downloadUrl ? `<p><a href="${project.downloadUrl}" download class="download-link" target="_blank">⬇ Download / Open</a></p>` : ""}
     `;
 
     // Gallery click event
     const galleryEl = document.getElementById("gallery");
     if (galleryEl) {
-      galleryEl.querySelectorAll("img").forEach(img => {
-        img.addEventListener("click", () => {
-          document.getElementById("mainImage").src = img.src;
+      const mainImgEl = document.getElementById("mainImage");
+      galleryEl.querySelectorAll("img").forEach(imgEl => {
+        imgEl.addEventListener("click", () => {
+          // Update main image
+          mainImgEl.src = imgEl.src;
+
+          // Update active class
           galleryEl.querySelectorAll("img").forEach(i => i.classList.remove("active"));
-          img.classList.add("active");
+          imgEl.classList.add("active");
         });
       });
     }
   }
 </script>
+
 <script src="/main.js"></script>
 </body>
 </html>

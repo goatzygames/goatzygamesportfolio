@@ -37,28 +37,29 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-window.addEventListener('scroll', () => {
-  const profilePic = document.querySelector('.profile-pic');
-  if (window.scrollY > 15) {
-    profilePic.classList.add('small');
-  } else {
-    profilePic.classList.remove('small');
-  }
-});
+const navToggle = document.querySelector('.nav-toggle');
+const header = document.querySelector('.site-header');
 
-const scrollBtn = document.getElementById('scrollButton');
-if (scrollBtn) {
-  scrollBtn.addEventListener('click', () => {
-    const target = document.getElementById('aboutMeScroll');
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
+if (navToggle && header) {
+  navToggle.addEventListener('click', () => {
+    const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
+    navToggle.setAttribute('aria-expanded', !expanded);
+  });
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 15) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
     }
   });
 }
 
 
-  const bounceBtn = document.querySelector('.bounce-btn');
 
+const bounceBtn = document.querySelector('.bounce-btn');
+
+if (bounceBtn) {
   window.addEventListener('scroll', () => {
     if (window.scrollY > 0) {
       bounceBtn.classList.add('hidden');
@@ -66,6 +67,8 @@ if (scrollBtn) {
       bounceBtn.classList.remove('hidden');
     }
   });
+}
+
   
   //first scroll stuff
   
