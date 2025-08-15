@@ -213,3 +213,19 @@ function renderProjects(list) {
 
   filterAndSort();
 });
+
+  // Get all nav links
+  const navLinks = document.querySelectorAll('.primary-nav .nav-list a');
+
+  // Get current page file name (e.g., 'index.html')
+  const currentPage = window.location.pathname.split('/').pop();
+
+  navLinks.forEach(link => {
+    // Remove active class from all links
+    link.classList.remove('active');
+
+    // Add active class to the link that matches the current page
+    if(link.getAttribute('href') === currentPage) {
+      link.classList.add('active');
+    }
+  });
