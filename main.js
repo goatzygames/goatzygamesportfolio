@@ -1,22 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Existing code for active link
+  // ACTIVE LINK HIGHLIGHT
   const navLinks = document.querySelectorAll('.primary-nav .nav-list a');
-  const currentPage = window.location.pathname.split('/').pop();
+  const currentPage = window.location.pathname.split('/').pop(); // e.g., "index"
 
   navLinks.forEach(link => {
     link.classList.remove('active');
-    if(link.getAttribute('href') === currentPage) {
+
+    // Remove leading "/" from href for comparison
+    const linkPage = link.getAttribute('href').replace(/^\//, '');
+    if (linkPage === currentPage) {
       link.classList.add('active');
     }
   });
 
-  // Existing contact form code
+  // CONTACT FORM SUBMISSION (demo only)
   const form = document.getElementById('contact-form');
   const status = document.getElementById('form-status');
   if (form) {
     form.addEventListener('submit', e => {
       e.preventDefault();
       const formData = new FormData(form);
+
       status.textContent = 'Sending...';
       setTimeout(() => {
         status.textContent = 'Message sent! I will get back to you soon.';
@@ -25,16 +29,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // NEW: nav toggle code
+  // NAV TOGGLE (mobile)
   const navToggle = document.querySelector('.nav-toggle');
   const nav = document.querySelector('.primary-nav');
 
   if (navToggle && nav) {
     navToggle.addEventListener('click', () => {
       nav.classList.toggle('open');
+
+      // Update aria-expanded for accessibility
+      const expanded = nav.classList.contains('open');
+      navToggle.setAttribute('aria-expanded', expanded);
     });
   }
 });
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
