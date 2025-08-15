@@ -231,36 +231,35 @@ function filterAndSort() {
   const filterElem = document.getElementById("filterType");
   const sortElem = document.getElementById("sort");
 
-  // Stop immediately if any required element is missing
   if (!searchElem || !filterElem || !sortElem) return;
 
-  const searchValue = searchElem.value;
+  const searchValue = searchElem.value.toLowerCase();
   const filterValue = filterElem.value;
   const sortValue = sortElem.value;
 
-    let filtered = projects.filter(p =>
-      (p.name.toLowerCase().includes(search) || 
-       p.tags.some(tag => tag.toLowerCase().includes(search))) &&
-      (filterType ? p.type === filterType : true)
-    );
+  let filtered = projects.filter(p =>
+    (p.name.toLowerCase().includes(searchValue) || 
+     p.tags.some(tag => tag.toLowerCase().includes(searchValue))) &&
+    (filterValue ? p.type === filterValue : true)
+  );
 
-    filtered.sort((a, b) => {
-      switch (sortValue) {
-        case "date-newest":
-          return new Date(b.date) - new Date(a.date);
-        case "date-oldest":
-          return new Date(a.date) - new Date(b.date);
-        case "price-lowest":
-          return a.price - b.price;
-        case "price-highest":
-          return b.price - a.price;
-        default:
-          return 0;
-      }
-    });
+  filtered.sort((a, b) => {
+    switch (sortValue) {
+      case "date-newest":
+        return new Date(b.date) - new Date(a.date);
+      case "date-oldest":
+        return new Date(a.date) - new Date(b.date);
+      case "price-lowest":
+        return a.price - b.price;
+      case "price-highest":
+        return b.price - a.price;
+      default:
+        return 0;
+    }
+  });
 
-    renderProjects(filtered);
-  }
+  renderProjects(filtered);
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   const search = document.getElementById("search");
@@ -270,10 +269,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (search) search.addEventListener("input", filterAndSort);
   if (filterType) filterType.addEventListener("change", filterAndSort);
   if (sort) sort.addEventListener("change", filterAndSort);
-});
 
-});
-
-filterAndSort();
-
+  // Run immediately after DOM is ready
+  filterAndSort();
 });
