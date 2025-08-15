@@ -5,7 +5,166 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact - Goatzy Games</title>
   <link rel="stylesheet" href="style.css" />
+  
+    <!-- Basic SEO -->
+<title>Goatzy Games</title>
+<meta name="description" content="Portfolio for me, Goatzy Games, an indie developer using Unreal Engine 5 and C++. Here you can look at my projects and contact me personally or in comments!">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Goatzy Games">
+<meta property="og:description" content="ortfolio for me, Goatzy Games, an indie developer using Unreal Engine 5 and C++. Here you can look at my projects and contact me personally or in comments!">
+<meta property="og:image" content="https://yourwebsite.com/preview-image.png">
+<meta property="og:url" content="https://goatzy.games">
  
+ 
+<style>
+.contactMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #111; /* dark gray / almost black */
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+}
+
+.contactSection {
+  width: 100%;
+  max-width: 600px;
+  background-color: #222; /* slightly lighter dark gray for contrast */
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.7), 0 0 15px rgba(119, 221, 119, 0.4); /* neon green glow */
+  color: #eee;
+}
+
+.contactSectionTitle {
+  font-size: 2.2rem;
+  color: #77dd77; /* neon green accent */
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#contactForm label {
+  font-weight: 600;
+  color: #77dd77;
+}
+
+#contactForm input,
+#contactForm textarea {
+  background-color: #111; /* match main dark background */
+  border: 2px solid #77dd77;
+  border-radius: 10px;
+  padding: 12px 15px;
+  color: #eee;
+  font-size: 1rem;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+  outline: none;
+  border-color: #77dd77;
+  box-shadow: 0 0 8px #77dd77;
+}
+
+#contactForm button {
+  background-color: #111;
+  border: 2px solid #77dd77;
+  color: #77dd77;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#contactForm button:hover {
+  background-color: #77dd77;
+  color: #111;
+  box-shadow: 0 0 12px #77dd77;
+}
+
+.contactMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #111; /* dark gray / almost black */
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+}
+
+.contactSection {
+  width: 90%;             /* make it take more horizontal space */
+  max-width: 900px;       /* wider max width */
+  background-color: #222; /* slightly lighter dark gray for contrast */
+  border-radius: 25px;    /* more rounded corners */
+  padding: 50px 40px;     /* more padding for a wider look */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.7), 0 0 20px rgba(119, 221, 119, 0.4);
+  color: #eee;
+}
+
+.contactSectionTitle {
+  font-size: 2.5rem;      /* slightly bigger title */
+  color: #77dd77;         /* neon green accent */
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;              /* more spacing between fields */
+}
+
+#contactForm label {
+  font-weight: 600;
+  color: #77dd77;
+  font-size: 1.1rem;
+}
+
+#contactForm input,
+#contactForm textarea {
+  background-color: #111;
+  border: 2px solid #77dd77;
+  border-radius: 12px;
+  padding: 15px 18px;
+  color: #eee;
+  font-size: 1.05rem;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+  outline: none;
+  border-color: #77dd77;
+  box-shadow: 0 0 10px #77dd77;
+}
+
+#contactForm button {
+  background-color: #111;
+  border: 2px solid #77dd77;
+  color: #77dd77;
+  padding: 15px;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#contactForm button:hover {
+  background-color: #77dd77;
+  color: #111;
+  box-shadow: 0 0 15px #77dd77;
+}
+
+</style>
 </head>
 <body>
 <header class="site-header">
@@ -37,24 +196,59 @@
   </div>
 </header>
 
-  <main class="container">
-    <section class="section-summary">
-      <h2 class="section-title">Contact Me</h2>
-      <form id="contact-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required />
+<main class="contactMain">
+  <section class="contactSection">
+    <h2 class="contactSectionTitle">Contact Me</h2>
+	<h3 style="font-weight: 500; color: #77dd77;">Contact me personally if you'd like to make any games with me, propose any ideas or even hire me!</h3>
+    <form
+      id="contactForm"
+      action="https://formspree.io/f/xjkozzwv"
+      method="POST"
+    >
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
 
-        <button type="submit">Send</button>
-      </form>
-      <p id="form-status"></p>
-    </section>
-  </main>
+      <button type="submit">Send</button>
+    </form>
+    <p id="form-status"></p>
+  </section>
+</main>
+
+<script>
+const form = document.getElementById("contactForm");
+const status = document.getElementById("form-status");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const data = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      status.textContent = "Thanks! Your message has been sent.";
+      form.reset();
+    } else {
+      const result = await response.json();
+      status.textContent = result.errors ? result.errors.map(e => e.message).join(", ") : "Oops! There was a problem.";
+    }
+  } catch (error) {
+    status.textContent = "Oops! There was a problem.";
+  }
+});
+</script>
+
 
   <footer>
     &copy; 2025 Goatzy Games. All rights reserved.
