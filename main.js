@@ -36,3 +36,180 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+window.addEventListener('scroll', () => {
+  const profilePic = document.querySelector('.profile-pic');
+  if (window.scrollY > 15) {
+    profilePic.classList.add('small');
+  } else {
+    profilePic.classList.remove('small');
+  }
+});
+
+const scrollBtn = document.getElementById('scrollButton');
+if (scrollBtn) {
+  scrollBtn.addEventListener('click', () => {
+    const target = document.getElementById('aboutMeScroll');
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+}
+
+
+  const bounceBtn = document.querySelector('.bounce-btn');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 0) {
+      bounceBtn.classList.add('hidden');
+    } else {
+      bounceBtn.classList.remove('hidden');
+    }
+  });
+  
+  //first scroll stuff
+  
+    let firstScrollDone = false;
+    const target = document.getElementById('aboutMeScroll');
+
+    function handleFirstScroll(e) {
+      if (firstScrollDone) return;
+
+      // Stop default scroll behaviour
+      e.preventDefault();
+
+      firstScrollDone = true;
+
+      // Smooth scroll to target
+      target.scrollIntoView({ behavior: 'smooth' });
+
+      // Remove listeners after first trigger
+      window.removeEventListener('wheel', handleFirstScroll, { passive: false });
+      window.removeEventListener('touchstart', handleFirstScroll, { passive: false });
+    }
+
+    // Listen for the *intention* to scroll
+    window.addEventListener('wheel', handleFirstScroll, { passive: false });
+    window.addEventListener('touchstart', handleFirstScroll, { passive: false });
+	
+document.addEventListener("DOMContentLoaded", () => {
+
+//Projects Array
+window.projects = [
+  {
+    name: "Flappy VHS",
+    tags: ["flappy bird", "arcade", "vhs", "1", "day", "project"],
+    date: "2025-08-13",
+    type: "game dev",
+    price: 0,
+    description: "Flappy VHS is an 1 Day Project which I singlehandedly with some assets and textures borrowed from sketchfab and google made, just to show what I can make in a single day. I do not plan to really continue this.",
+    videoUrl: "https://www.youtube.com/embed/VIDEO_ID",
+    images: [
+      "images/flappy1.png",
+      "images/flappy2.png",
+      "images/flappy3.png"
+    ],
+	downloadUrl: "files/my-cool-project.zip"
+  },
+  {
+    name: "Portfolio Website",
+    tags: ["web dev", "portfolio"],
+    date: "2025-05-10",
+    type: "web dev",
+    price: 0,
+    description: "A sleek, modern portfolio site showcasing my work in web development.",
+    videoUrl: "",
+    images: ["images/portfolio1.png"],
+	downloadUrl: "https://www.goatzy.games"
+  },
+  {
+    name: "The Last Customer",
+    tags: ["the", "last", "customer", "horror"],
+    date: "2025-08-14",
+    type: "game dev",
+    price: 5,
+    description: "The Last Customer is a survival horror game where you play as a gas station clerk facing nightmarish creatures disguised as customers. Make quick decisions, manage resources, and uncover dark secrets to survive. Test your instincts and unravel the mystery before it's too late.<br><br>This also is my first big project ever, so I am not saying this is my proudest work ever, but it really helped me learn game dev more as it has a lot of different mechanics I think no one has yet discovered. ",
+    videoUrl: "https://www.youtube.com/embed/m9KdQ1deXlo",
+    images: [
+      "pics/thelastcustomer-image1.jpg",
+      "pics/thelastcustomer-image2.jpg",
+	  "pics/thelastcustomer-image3.jpg"
+    ],
+	downloadUrl: "https://store.steampowered.com/app/3249630/The_Last_Customer"
+  }
+];
+//Projects Array End
+
+function renderProjects(list) {
+  const container = document.getElementById("projectList");
+  container.innerHTML = "";
+
+  list.forEach(project => {
+    const el = document.createElement("div");
+    el.className = "project";
+
+    // Get the first image if available
+    let firstImageHTML = "";
+    if (project.images && project.images.length > 0) {
+      firstImageHTML = `
+        <div class="project-image">
+          <img src="${project.images[0]}" alt="${project.name}" />
+        </div>
+      `;
+    }
+
+    el.innerHTML = `
+      ${firstImageHTML}
+      <h2>${project.name}</h2>
+      <p><strong>Type:</strong> ${project.type}</p>
+      <p><strong>Date:</strong> ${project.date}</p>
+      <p><strong>${project.price}€</strong></p>
+      <p><strong>Tags:</strong> ${project.tags.join(", ")}</p>
+    `;
+
+    el.style.cursor = "pointer";
+    el.addEventListener("click", () => {
+      // Redirect to project.html with name as a URL parameter
+      window.location.href = `project.html?id=${encodeURIComponent(project.name)}`;
+    });
+
+    container.appendChild(el);
+  });
+}
+
+
+  function filterAndSort() {
+    const search = document.getElementById("search").value.toLowerCase();
+    const filterType = document.getElementById("filterType").value;
+    const sortValue = document.getElementById("sort").value;
+
+    let filtered = projects.filter(p =>
+      (p.name.toLowerCase().includes(search) || 
+       p.tags.some(tag => tag.toLowerCase().includes(search))) &&
+      (filterType ? p.type === filterType : true)
+    );
+
+    filtered.sort((a, b) => {
+      switch (sortValue) {
+        case "date-newest":
+          return new Date(b.date) - new Date(a.date);
+        case "date-oldest":
+          return new Date(a.date) - new Date(b.date);
+        case "price-lowest":
+          return a.price - b.price;
+        case "price-highest":
+          return b.price - a.price;
+        default:
+          return 0;
+      }
+    });
+
+    renderProjects(filtered);
+  }
+
+  document.getElementById("search").addEventListener("input", filterAndSort);
+  document.getElementById("filterType").addEventListener("change", filterAndSort);
+  document.getElementById("sort").addEventListener("change", filterAndSort);
+
+  filterAndSort();
+});
