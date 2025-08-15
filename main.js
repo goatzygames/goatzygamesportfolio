@@ -255,9 +255,15 @@ function renderProjects(list) {
     renderProjects(filtered);
   }
 
-document.getElementById("search").addEventListener("input", filterAndSort);
-document.getElementById("filterType").addEventListener("change", filterAndSort);
-document.getElementById("sort").addEventListener("change", filterAndSort);
+document.addEventListener('DOMContentLoaded', () => {
+  const search = document.getElementById("search");
+  const filterType = document.getElementById("filterType");
+  const sort = document.getElementById("sort");
+
+  if (search) search.addEventListener("input", filterAndSort);
+  if (filterType) filterType.addEventListener("change", filterAndSort);
+  if (sort) sort.addEventListener("change", filterAndSort);
+});
 
 filterAndSort();
 
