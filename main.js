@@ -227,9 +227,16 @@ function renderProjects(list) {
 
 
 function filterAndSort() {
-  const searchInput = document.getElementById("search")?.value || "";
-  const filterValue = document.getElementById("filterType")?.value || "";
-  const sortValue = document.getElementById("sort")?.value || "";
+  const searchElem = document.getElementById("search");
+  const filterElem = document.getElementById("filterType");
+  const sortElem = document.getElementById("sort");
+
+  // Stop immediately if any required element is missing
+  if (!searchElem || !filterElem || !sortElem) return;
+
+  const searchValue = searchElem.value;
+  const filterValue = filterElem.value;
+  const sortValue = sortElem.value;
 
     let filtered = projects.filter(p =>
       (p.name.toLowerCase().includes(search) || 
