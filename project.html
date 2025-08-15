@@ -9,7 +9,7 @@ title: About
 <head>
 <meta charset="UTF-8">
 <title>Project Details</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/style.css">
 
   <!-- Basic SEO -->
 <title>Goatzy Games</title>
@@ -152,7 +152,7 @@ iframe {
 <body>
 <header class="site-header">
   <div class="container header-container">
-    <a href="index.html" class="site-logo" style="display: flex; justify-content: flex-start; text-decoration: none;">
+    <a href="/index" class="site-logo" style="display: flex; justify-content: flex-start; text-decoration: none;">
       <h1>Goatzy Games</h1>
       <!-- <img src="pics/Goatzy_GamesLogoNOTEXT.png" style="width: 30%; height: auto;"> -->
     </a>
@@ -170,10 +170,10 @@ iframe {
 
       <!-- Nav list -->
       <ul id="primary-menu" class="nav-list">
-        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-		<li><a href="comments.html">Comments</a></li>
+        <li><a href="/index" class="active" aria-current="page">Home</a></li>
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/contact">Contact</a></li>
+		<li><a href="/comments">Comments</a></li>
 		
       </ul>
     </nav>
@@ -184,7 +184,7 @@ iframe {
   <p><a href="projects.html">← Back to Projects</a></p>
 </div>
 
-<script src="projects-data.js"></script> <!-- shared data file -->
+<script src="/projects-data.js"></script> <!-- shared data file -->
 <script>
   const params = new URLSearchParams(window.location.search);
   const projectId = params.get("id");
@@ -229,6 +229,6 @@ iframe {
     }
   }
 </script>
-<script src="main.js"></script>
+<script src="/main.js"></script>
 </body>
 </html>
