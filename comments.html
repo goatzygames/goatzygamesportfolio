@@ -124,6 +124,118 @@
   border-color: #77dd77;
   outline: none;
   box-shadow: 0 0 6px rgba(119, 221, 119, 0.5);
+  
+  /* Commento container */
+.commento {
+  background-color: #111;
+  color: #eee;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+/* Comment form */
+.commento #commento-comment-form,
+.commento #commento-login {
+  background-color: #222;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.commento input,
+.commento textarea {
+  width: 100%;
+  background-color: #222;
+  color: #eee;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 8px;
+  font-size: 1rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.commento input:focus,
+.commento textarea:focus {
+  outline: none;
+  box-shadow: 0 0 8px 2px #77dd77;
+}
+
+/* Buttons */
+.commento button {
+  background-color: #77dd77;
+  color: #111;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.commento button:hover {
+  background-color: #5cb85c;
+  transform: scale(1.05);
+}
+
+/* Individual comments */
+.commento .comment {
+  border-bottom: 1px solid #333;
+  padding: 15px 0;
+  margin-bottom: 15px;
+}
+
+.commento .comment:last-child {
+  border-bottom: none;
+}
+
+.commento .comment .comment-author {
+  font-weight: 700;
+  color: #77dd77;
+  margin-right: 10px;
+}
+
+.commento .comment .comment-date {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.commento .comment p {
+  margin-top: 5px;
+  line-height: 1.5;
+  color: #eee;
+}
+
+/* Login / OAuth links */
+.commento .commento-login a {
+  color: #77dd77;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.commento .commento-login a:hover {
+  color: #55bb55;
+  text-decoration: underline;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .commento {
+    padding: 15px;
+  }
+  .commento input,
+  .commento textarea {
+    font-size: 0.95rem;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -162,12 +274,7 @@
     <div id="commento"></div>
   </div>
 
-<script defer
-  src="http://commento.example.com/js/commento.js"
-  data-css-override="style.css"
-  data-auto-init="true">
-</script>
-<div id="commento"></div>
+  <script defer src="https://cdn.commento.io/js/commento.js"></script>
  </div>
 
   <footer>
