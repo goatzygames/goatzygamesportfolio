@@ -53,7 +53,7 @@
   margin-bottom: 25px;
 }
 
-/* ---------- Commento form styling ---------- 
+/* ---------- Commento form styling ---------- */
 #commento input,
 #commento textarea,
 #commento select {
@@ -140,7 +140,15 @@
 #contact-form button:hover {
   background-color: #77dd77;
   color: #111;
-} */
+}
+
+.commentSectionContainer {
+  background-color: transparent !important;
+  border: 2px solid #77dd77 !important;
+  color: #77dd77 !important;
+  border-radius: 8px !important;
+  padding: 0.3rem;
+}
   </style>
 </head>
 <body>
@@ -167,6 +175,7 @@
         <li><a href="index.html" class="active" aria-current="page">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="contact.html">Contact</a></li>
+		<li><a href="comments.html">Comments</a></li>
       </ul>
     </nav>
   </div>
@@ -191,12 +200,14 @@
     </section>
   </main>
   
+ <div class="commentSectionContainer">
     <div class="commentsSection">
     <h1>Comments</h1>
     <div id="commento"></div>
   </div>
 
   <script defer src="https://cdn.commento.io/js/commento.js"></script>
+ </div>
 
   <footer>
     &copy; 2025 Goatzy Games. All rights reserved.
