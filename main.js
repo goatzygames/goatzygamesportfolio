@@ -185,7 +185,7 @@ window.projects = [
     ],
 	downloadUrl: "https://invertnest.eu"
   }
-];
+]});
 //Projects Array End
 
 function renderProjects(list) {
