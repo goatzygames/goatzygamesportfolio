@@ -240,12 +240,12 @@ function renderProjects(list) {
     renderProjects(filtered);
   }
 
-document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("search").addEventListener("input", filterAndSort);
-  document.getElementById("filterType").addEventListener("change", filterAndSort);
-  document.getElementById("sort").addEventListener("change", filterAndSort);
+document.getElementById("search").addEventListener("input", filterAndSort);
+document.getElementById("filterType").addEventListener("change", filterAndSort);
+document.getElementById("sort").addEventListener("change", filterAndSort);
 
-  filterAndSort();
+filterAndSort();
+
 });
 
   // Get all nav links
