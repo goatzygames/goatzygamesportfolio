@@ -1,38 +1,41 @@
 document.addEventListener('DOMContentLoaded', () => {
-	  // Get all nav links
+  // Existing code for active link
   const navLinks = document.querySelectorAll('.primary-nav .nav-list a');
-
-  // Get current page file name (e.g., 'index.html')
   const currentPage = window.location.pathname.split('/').pop();
 
   navLinks.forEach(link => {
-    // Remove active class from all links
     link.classList.remove('active');
-
-    // Add active class to the link that matches the current page
     if(link.getAttribute('href') === currentPage) {
       link.classList.add('active');
     }
   });
+
+  // Existing contact form code
   const form = document.getElementById('contact-form');
   const status = document.getElementById('form-status');
-
   if (form) {
     form.addEventListener('submit', e => {
       e.preventDefault();
-
       const formData = new FormData(form);
-
-      // For demonstration only; no backend connected
       status.textContent = 'Sending...';
-
       setTimeout(() => {
         status.textContent = 'Message sent! I will get back to you soon.';
         form.reset();
       }, 1000);
     });
   }
+
+  // NEW: nav toggle code
+  const navToggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.primary-nav');
+
+  if (navToggle && nav) {
+    navToggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+  }
 });
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const navToggle = document.querySelector('.nav-toggle');
