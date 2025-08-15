@@ -226,10 +226,10 @@ function renderProjects(list) {
 }
 
 
-  function filterAndSort() {
-    const search = document.getElementById("search").value.toLowerCase();
-    const filterType = document.getElementById("filterType").value;
-    const sortValue = document.getElementById("sort").value;
+function filterAndSort() {
+  const searchInput = document.getElementById("search")?.value || "";
+  const filterValue = document.getElementById("filterType")?.value || "";
+  const sortValue = document.getElementById("sort")?.value || "";
 
     let filtered = projects.filter(p =>
       (p.name.toLowerCase().includes(search) || 
@@ -255,7 +255,7 @@ function renderProjects(list) {
     renderProjects(filtered);
   }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   const search = document.getElementById("search");
   const filterType = document.getElementById("filterType");
   const sort = document.getElementById("sort");
@@ -263,6 +263,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (search) search.addEventListener("input", filterAndSort);
   if (filterType) filterType.addEventListener("change", filterAndSort);
   if (sort) sort.addEventListener("change", filterAndSort);
+});
+
 });
 
 filterAndSort();
