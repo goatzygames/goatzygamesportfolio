@@ -70,30 +70,30 @@ if (bounceBtn) {
 }
 
   
-  //first scroll stuff
-  
-    let firstScrollDone = false;
-    const target = document.getElementById('aboutMeScroll');
+ // First scroll stuff
+let firstScrollDone = false;
+const target = document.getElementById('aboutMeScroll');
 
-    function handleFirstScroll(e) {
-      if (firstScrollDone) return;
+function handleFirstScroll(e) {
+  if (firstScrollDone) return;
 
-      // Stop default scroll behaviour
-      e.preventDefault();
+  // Stop default scroll behaviour
+  e.preventDefault();
 
-      firstScrollDone = true;
+  firstScrollDone = true;
 
-      // Smooth scroll to target
-      target.scrollIntoView({ behavior: 'smooth' });
+  // Smooth scroll to target
+  target.scrollIntoView({ behavior: 'smooth' });
 
-      // Remove listeners after first trigger
-      window.removeEventListener('wheel', handleFirstScroll, { passive: false });
-      window.removeEventListener('touchstart', handleFirstScroll, { passive: false });
-    }
+  // Remove listeners after first trigger
+  window.removeEventListener('wheel', handleFirstScroll, false);
+  window.removeEventListener('touchstart', handleFirstScroll, false);
+}
 
-    // Listen for the *intention* to scroll
-    window.addEventListener('wheel', handleFirstScroll, { passive: false });
-    window.addEventListener('touchstart', handleFirstScroll, { passive: false });
+// Listen for the *intention* to scroll
+window.addEventListener('wheel', handleFirstScroll, { passive: false });
+window.addEventListener('touchstart', handleFirstScroll, { passive: false });
+
 	
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -240,6 +240,7 @@ function renderProjects(list) {
     renderProjects(filtered);
   }
 
+document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("search").addEventListener("input", filterAndSort);
   document.getElementById("filterType").addEventListener("change", filterAndSort);
   document.getElementById("sort").addEventListener("change", filterAndSort);

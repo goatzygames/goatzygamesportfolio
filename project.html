@@ -30,20 +30,21 @@ title: About
   line-height: 1.6;
 }
 */
-/*
 .container:not(.header-container) {
   max-width: 900px;
+  width: 90%;
   margin: auto;
   background: #1e1e1e;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.6);
   border: 1px solid #2a2a2a;
+  box-sizing: border-box;
 }
-*/
 
 .title {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   border-bottom: 2px solid #2a2a2a;
@@ -52,8 +53,10 @@ title: About
 
 .gallery {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   margin-top: 10px;
+  justify-content: center; /* centers gallery on smaller screens */
 }
 
 .gallery img {
@@ -112,6 +115,50 @@ iframe {
   margin-top: 10px;
   color: #a0e68c;
 }
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .gallery img {
+    width: 60px;
+    height: 45px;
+  }
+
+  .main-image,
+  iframe {
+    max-height: 300px;
+  }
+
+  .title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery img {
+    width: 50px;
+    height: 40px;
+  }
+
+  .main-image,
+  iframe {
+    max-height: 200px;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .tags {
+    font-size: 0.8rem;
+  }
+
+  .price {
+    font-size: 1.1rem;
+  }
+}
+
 
 </style>
 </head>
@@ -198,6 +245,6 @@ iframe {
   }
 </script>
 
-<script src="/main.js"></script>
+<script src="/main.js" defer></script>
 </body>
 </html>
