@@ -1,17 +1,36 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // ACTIVE LINK HIGHLIGHT
+
+document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('.primary-nav .nav-list a');
-  const currentPage = window.location.pathname.split('/').pop(); // e.g., "index"
+
+  // Get current page. If root '/', treat as 'index'
+  let currentPage = window.location.pathname.split('/').pop();
+  if (!currentPage) currentPage = 'index';
 
   navLinks.forEach(link => {
     link.classList.remove('active');
 
     // Remove leading "/" from href for comparison
     const linkPage = link.getAttribute('href').replace(/^\//, '');
+
     if (linkPage === currentPage) {
       link.classList.add('active');
     }
   });
+
+  // NAV TOGGLE (mobile)
+  const navToggle = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('.primary-nav');
+
+  if (navToggle && nav) {
+    navToggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', nav.classList.contains('open'));
+    });
+  }
+});
+
+
 
   // CONTACT FORM SUBMISSION (demo only)
   const form = document.getElementById('contact-form');
@@ -28,39 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 1000);
     });
   }
-
-  // NAV TOGGLE (mobile)
-  const navToggle = document.querySelector('.nav-toggle');
-  const nav = document.querySelector('.primary-nav');
-
-  if (navToggle && nav) {
-    navToggle.addEventListener('click', () => {
-      nav.classList.toggle('open');
-
-      // Update aria-expanded for accessibility
-      const expanded = nav.classList.contains('open');
-      navToggle.setAttribute('aria-expanded', expanded);
-    });
-  }
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const currentPath = window.location.pathname; // e.g. "/projects"
-  const links = document.querySelectorAll("#primary-menu a");
-
-  links.forEach(link => {
-    // Remove old active states
-    link.classList.remove("active");
-    link.removeAttribute("aria-current");
-
-    // If the href matches the current path, set active
-    if (link.getAttribute("href") === currentPath) {
-      link.classList.add("active");
-      link.setAttribute("aria-current", "page");
-    }
-  });
-});
-
 
 
 document.addEventListener('DOMContentLoaded', () => {
