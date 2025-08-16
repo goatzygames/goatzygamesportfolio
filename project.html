@@ -228,9 +228,26 @@ iframe {
       <div class="description">${project.description}</div>
       ${project.downloadUrl ? `<p><a href="${project.downloadUrl}" download class="download-link" target="_blank">⬇ Download / Open</a></p>` : ""}
     `;
-	
-	commentscontainer1.innerHTML = `
-		 <div class="commentSectionContainer">
+
+    // Gallery click event
+    const galleryEl = document.getElementById("gallery");
+    if (galleryEl) {
+      const mainImgEl = document.getElementById("mainImage");
+      galleryEl.querySelectorAll("img").forEach(imgEl => {
+        imgEl.addEventListener("click", () => {
+          // Update main image
+          mainImgEl.src = imgEl.src;
+
+          // Update active class
+          galleryEl.querySelectorAll("img").forEach(i => i.classList.remove("active"));
+          imgEl.classList.add("active");
+        });
+      });
+    }
+  }
+</script>
+
+ <div class="commentSectionContainer">
     <div class="commentsSection">
     <h1>Comments</h1>
     <div id="commento"></div>
@@ -427,25 +444,6 @@ iframe {
 }
 
   </style>
-	`
-
-    // Gallery click event
-    const galleryEl = document.getElementById("gallery");
-    if (galleryEl) {
-      const mainImgEl = document.getElementById("mainImage");
-      galleryEl.querySelectorAll("img").forEach(imgEl => {
-        imgEl.addEventListener("click", () => {
-          // Update main image
-          mainImgEl.src = imgEl.src;
-
-          // Update active class
-          galleryEl.querySelectorAll("img").forEach(i => i.classList.remove("active"));
-          imgEl.classList.add("active");
-        });
-      });
-    }
-  }
-</script>
 
 <script src="/main.js" defer></script>
 </body>
