@@ -79,6 +79,10 @@ title: About
   /* neon glow effect */
   box-shadow: 0 0 5px #77dd77, 0 0 10px #77dd77, 0 0 20px #77dd77;
   transition: box-shadow 0.3s ease;
+  
+  min-height: 2rem;
+  resize: both;
+  overflow: auto; /* ensures scrollbars appear when needed */
 }
 
 /* Optional: intensify glow on focus */
@@ -104,12 +108,12 @@ title: About
   transform: scale(1.05);
 }
 
-#commento a {
-	padding: 2rem;
-}
-
 #commento-pre-comments-area {
 	margin: 3rem;
+}
+
+#commento-markdown-button-root {
+	padding: 1rem;
 }
 
   </style>
@@ -122,7 +126,6 @@ title: About
   <script src="/main.js" defer></script>
 </body>
 </html>
-
 
 
 
