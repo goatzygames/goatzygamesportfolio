@@ -67,7 +67,7 @@ title: About
 	<style>
 
 
-#commento input {
+#commento textarea {
   background-color: #000000;      /* input background */
   color: #77dd77;                 /* text color */
   border: 1px solid #77dd77;      /* optional neon border */
@@ -82,8 +82,34 @@ title: About
 }
 
 /* Optional: intensify glow on focus */
-#commento input:focus {
+#commento textarea:focus {
   box-shadow: 0 0 10px #77dd77, 0 0 20px #77dd77, 0 0 40px #77dd77;
+}
+
+#commento button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #77dd77;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: #111;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#commento button:hover {
+  background-color: #5cb85c;
+  transform: scale(1.05);
+}
+
+#commento a {
+	padding: 2rem;
+}
+
+#commento-pre-comments-area {
+	margin: 3rem;
 }
 
   </style>
@@ -96,6 +122,7 @@ title: About
   <script src="/main.js" defer></script>
 </body>
 </html>
+
 
 
 
