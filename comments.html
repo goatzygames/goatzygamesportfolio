@@ -23,6 +23,65 @@ title: About
 <meta property="og:url" content="https://goatzy.games">
   
   <style>
+
+
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-container">
+    <a href="/index" class="site-logo" style="display: flex; justify-content: flex-start; text-decoration: none;">
+      <h1>Goatzy Games</h1>
+      <!-- <img src="pics/Goatzy_GamesLogoNOTEXT.png" style="width: 30%; height: auto;"> -->
+    </a>
+
+    <nav class="primary-nav" aria-label="Primary navigation" style="padding-bottom: 2%;">
+      <!-- Nav toggle button -->
+      <button
+        class="nav-toggle"
+        aria-controls="primary-menu"
+        aria-expanded="false"
+        aria-label="Toggle menu"
+      >
+        <span class="hamburger"></span>
+      </button>
+
+      <!-- Nav list -->
+      <ul id="primary-menu" class="nav-list">
+        <li><a href="/index" class="active" aria-current="page">Home</a></li>
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/contact">Contact</a></li>
+		<li><a href="/comments">Comments</a></li>
+		
+      </ul>
+    </nav>
+  </div>
+</header>
+  
+ <div class="commentSectionContainer">
+    <div class="commentsSection">
+    <h1>Comments</h1>
+    <div id="commento"></div>
+  </div>
+
+  <script defer src="https://cdn.commento.io/js/commento.js"></script>
+ </div>
+
+	<style>
+		/* Remove faded/grey look from Commento action icons */
+
+.commento-button {
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+/* Optional: also disable hover effect */
+.commento-button:hover {
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+
   .commentsSection {
     background: #1e1e1e;
     border: 2px solid #2a2a2a;
@@ -264,63 +323,6 @@ title: About
 .commento .comment i + i {
   display: none;  /* hides any extra icons after the first */
 }
-
-
-  </style>
-</head>
-<body>
-<header class="site-header">
-  <div class="container header-container">
-    <a href="/index" class="site-logo" style="display: flex; justify-content: flex-start; text-decoration: none;">
-      <h1>Goatzy Games</h1>
-      <!-- <img src="pics/Goatzy_GamesLogoNOTEXT.png" style="width: 30%; height: auto;"> -->
-    </a>
-
-    <nav class="primary-nav" aria-label="Primary navigation" style="padding-bottom: 2%;">
-      <!-- Nav toggle button -->
-      <button
-        class="nav-toggle"
-        aria-controls="primary-menu"
-        aria-expanded="false"
-        aria-label="Toggle menu"
-      >
-        <span class="hamburger"></span>
-      </button>
-
-      <!-- Nav list -->
-      <ul id="primary-menu" class="nav-list">
-        <li><a href="/index" class="active" aria-current="page">Home</a></li>
-        <li><a href="/projects">Projects</a></li>
-        <li><a href="/contact">Contact</a></li>
-		<li><a href="/comments">Comments</a></li>
-		
-      </ul>
-    </nav>
-  </div>
-</header>
-  
- <div class="commentSectionContainer">
-    <div class="commentsSection">
-    <h1>Comments</h1>
-    <div id="commento"></div>
-  </div>
-
-  <script defer src="https://cdn.commento.io/js/commento.js"></script>
- </div>
-
-	<style>
-		/* Remove faded/grey look from Commento action icons */
-
-.commento-button {
-  opacity: 1 !important;
-  filter: none !important;
-}
-
-/* Optional: also disable hover effect */
-.commento-button:hover {
-  opacity: 1 !important;
-  filter: none !important;
-}
 	</style>
 
   <footer>
@@ -330,4 +332,5 @@ title: About
   <script src="/main.js" defer></script>
 </body>
 </html>
+
 
