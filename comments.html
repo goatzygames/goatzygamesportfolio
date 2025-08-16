@@ -80,7 +80,7 @@ title: About
   box-shadow: 0 0 5px #77dd77, 0 0 10px #77dd77, 0 0 20px #77dd77;
   transition: box-shadow 0.3s ease;
   
-  min-height: 2rem;
+  min-height: 2	rem;
   resize: both;
   overflow: auto; /* ensures scrollbars appear when needed */
 }
@@ -101,6 +101,9 @@ title: About
   cursor: pointer;
   color: #111;
   transition: background-color 0.3s ease, transform 0.3s ease;
+  white-space: nowrap;     /* prevents text from breaking */
+  display: inline-block;   /* ensures width matches content */
+  width: auto;             /* let it grow with text */
 }
 
 #commento button:hover {
@@ -114,6 +117,10 @@ title: About
 
 #commento-markdown-button-root {
 	padding: 1rem;
+}
+
+#commento-submit-button-root {
+	max-width: 80%;
 }
 
   </style>
