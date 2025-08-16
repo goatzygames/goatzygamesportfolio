@@ -253,6 +253,119 @@ title: About
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* Comment card */
+.commento-comment {
+  background: #1b1b1b;
+  border-radius: 14px;
+  padding: 18px 22px;
+  margin: 18px 0;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.55);
+  transition: background-color 0.3s ease, transform 0.25s ease;
+  border: 1px solid #222;
+}
+
+.commento-comment:hover {
+  background: #242424;
+  transform: translateY(-2px);
+}
+
+/* Author + time row */
+.commento-name {
+  color: #77dd77;
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-right: 10px;
+}
+
+.commento-timeago {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+/* Comment text */
+.commento-body {
+  margin-top: 8px;
+  color: #ddd;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* --- Footer (actions like reply, delete, share) --- */
+.commento-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.commento-footer button,
+.commento-footer a {
+  background: #222;
+  border: 1px solid #333;
+  color: #77dd77;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+.commento-footer button:hover,
+.commento-footer a:hover {
+  background-color: #77dd77;
+  border-color: #77dd77;
+  color: #111;
+  transform: scale(1.05);
+}
+
+/* Nested replies */
+.commento-children {
+  border-left: 2px solid #77dd77;
+  margin-left: 20px;
+  padding-left: 16px;
+  margin-top: 14px;
+}
+
+/* Input box */
+.commento-input,
+.commento-textarea {
+  background: #222;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1rem;
+  color: #eee;
+  width: 100%;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.commento-input:focus,
+.commento-textarea:focus {
+  border-color: #77dd77;
+  box-shadow: 0 0 8px 2px #77dd77aa;
+  outline: none;
+}
+
+/* Submit button */
+.commento-submit-button {
+  margin-top: 12px;
+  background-color: #77dd77;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 10px 16px;
+  cursor: pointer;
+  color: #111;
+  transition: background-color 0.3s ease, transform 0.25s ease;
+}
+
+.commento-submit-button:hover {
+  background-color: #5cb85c;
+  transform: scale(1.05);
+}
+
 
   </style>
 
