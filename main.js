@@ -97,7 +97,7 @@ if (bounceBtn) {
 }
 
   
- // First scroll stuff
+// First scroll stuff
 let firstScrollDone = false;
 const target = document.getElementById('aboutMeScroll');
 
@@ -106,16 +106,18 @@ function handleFirstScroll(e) {
 
   // Stop default scroll behaviour
   e.preventDefault();
-
   firstScrollDone = true;
 
-  // Smooth scroll to target
-  target.scrollIntoView({ behavior: 'smooth' });
+  if (target) {
+    // Smooth scroll to target if it exists
+    target.scrollIntoView({ behavior: 'smooth' });
+  }
 
   // Remove listeners after first trigger
   window.removeEventListener('wheel', handleFirstScroll, false);
   window.removeEventListener('touchstart', handleFirstScroll, false);
 }
+
 
 // Listen for the *intention* to scroll
 window.addEventListener('wheel', handleFirstScroll, { passive: false });
