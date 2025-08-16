@@ -142,16 +142,6 @@ title: About
   box-sizing: border-box;
 }
 
-/* Individual comment container */
-.commento-comment {
-  background: #1e1e1e;
-  border-radius: 12px;
-  padding: 16px 20px;
-  margin: 15px 0;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-  transition: background-color 0.3s ease, transform 0.25s ease;
-}
-
 .commento-comment:hover {
   background: #252525;
   transform: translateY(-2px);
@@ -201,13 +191,6 @@ title: About
   color: #111;
 }
 
-/* Reply nesting */
-.commento-children {
-  border-left: 2px solid #77dd77;
-  margin-left: 18px;
-  padding-left: 16px;
-}
-
 /* Input fields */
 .commento-input,
 .commento-textarea {
@@ -250,19 +233,6 @@ title: About
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
-}
-
-.commento-comment {
-  display: flex;
-  flex-direction: column;
-}
-
-.commento-body {
-  order: 1; /* comment text first */
-}
-
-.commento-footer {
-  order: 2; /* buttons after text */
 }
 
   </style>
