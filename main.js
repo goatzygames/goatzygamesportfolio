@@ -3,14 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('.primary-nav .nav-list a');
 
-  // Get current page. If root '/', treat as 'index'
-  let currentPage = window.location.pathname.split('/').pop();
-  if (!currentPage) currentPage = 'index';
+  // Normalize pathname: remove trailing slash, default '/' to 'index'
+  let path = window.location.pathname.replace(/\/$/, ''); // removes trailing slash
+  let currentPage = path.split('/').pop() || 'index';
 
   navLinks.forEach(link => {
     link.classList.remove('active');
 
-    // Remove leading "/" from href for comparison
     const linkPage = link.getAttribute('href').replace(/^\//, '');
 
     if (linkPage === currentPage) {
@@ -29,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
-
 
 
   // CONTACT FORM SUBMISSION (demo only)
