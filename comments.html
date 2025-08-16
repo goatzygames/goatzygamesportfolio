@@ -251,6 +251,89 @@ title: About
 	text-align: center;
 }
 
+/* Commento Login Box */
+#commento-login-box {
+  max-width: 450px;
+  margin: 40px auto;
+  background-color: #222;
+  border-radius: 15px;
+  padding: 25px 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.7);
+  opacity: 0;
+  animation: fadeInUp 0.7s ease forwards;
+  animation-delay: 0.5s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  #commento-login-box {
+    margin: 20px;
+    padding: 20px 15px;
+  }
+}
+
+#commento-login-box h3 {
+  color: #77dd77;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#commento-login-box input[type="text"],
+#commento-login-box input[type="password"],
+#commento-login-box input[type="email"] {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background-color: #111;
+  color: #eee;
+  font-size: 1rem;
+  transition: box-shadow 0.3s ease;
+}
+
+#commento-login-box input:focus {
+  outline: none;
+  box-shadow: 0 0 8px 2px #77dd77;
+}
+
+#commento-login-box button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #77dd77;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #111;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#commento-login-box button:hover {
+  background-color: #5cb85c;
+  transform: scale(1.05);
+}
+
+#commento-login-box .login-footer {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+#commento-login-box .login-footer a {
+  color: #77dd77;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#commento-login-box .login-footer a:hover {
+  color: #55bb55;
+}
+
   </style>
 
 
