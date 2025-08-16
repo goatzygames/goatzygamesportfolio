@@ -44,6 +44,23 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const currentPath = window.location.pathname; // e.g. "/projects"
+  const links = document.querySelectorAll("#primary-menu a");
+
+  links.forEach(link => {
+    // Remove old active states
+    link.classList.remove("active");
+    link.removeAttribute("aria-current");
+
+    // If the href matches the current path, set active
+    if (link.getAttribute("href") === currentPath) {
+      link.classList.add("active");
+      link.setAttribute("aria-current", "page");
+    }
+  });
+});
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
