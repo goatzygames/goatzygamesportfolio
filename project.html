@@ -199,8 +199,6 @@ iframe {
   <p><a href="/projects">← Back to Projects</a></p>
 </div>
 
-<div id="commento-container123"></div>
-
 <script src="/projects-data.js"></script> <!-- shared data file -->
 <script>
   const params = new URLSearchParams(window.location.search);
@@ -249,18 +247,21 @@ iframe {
   }
 </script>
 
+<div id="commento-container-${projectId}"></div>
+
 <script>
+  const commentoContainerId = "commento-container-" + projectId;
+  const commentoDiv = document.createElement("div");
+  commentoDiv.id = commentoContainerId;
+  document.body.appendChild(commentoDiv);
 
-  if (projectId) {
-    const commentoContainer = document.getElementById("commento-container123");
-    commentoContainer.innerHTML = `<commento id="commento" data-id="project-${projectId}"></commento>`;
-
-    const script = document.createElement("script");
-    script.src = "https://cdn.commento.io/js/commento.js";
-    script.defer = true;
-    document.body.appendChild(script);
-  }
+  // Load Commento
+  const commentoScript = document.createElement("script");
+  commentoScript.src = "https://cdn.commento.io/js/commento.js";
+  commentoScript.defer = true;
+  document.body.appendChild(commentoScript);
 </script>
+
 
 	<style>
 
