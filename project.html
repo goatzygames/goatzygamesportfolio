@@ -11,8 +11,6 @@ title: About
 <title>Project Details</title>
 <link rel="stylesheet" href="/style.css">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <!-- Basic SEO -->
 <title>Goatzy Games</title>
 <meta name="description" content="Portfolio for me, Goatzy Games, an indie developer using Unreal Engine 5 and C++. Here you can look at my projects and contact me personally or in comments!">
@@ -247,7 +245,204 @@ iframe {
   }
 </script>
 
+ <div class="commentSectionContainer">
+    <div class="commentsSection">
+    <h1>Comments</h1>
+    <div id="commento"></div>
+  </div>
+
+  <script defer src="https://cdn.commento.io/js/commento.js"></script>
+ </div>
+
+	<style>
+
+
+#commento textarea {
+  background-color: #000000;      /* input background */
+  color: #77dd77;                 /* text color */
+  border: 1px solid #77dd77;      /* optional neon border */
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 4px;
+  outline: none;
+
+  /* neon glow effect */
+  box-shadow: 0 0 5px #77dd77, 0 0 10px #77dd77, 0 0 20px #77dd77;
+  transition: box-shadow 0.3s ease;
+  
+  min-height: 2	rem;
+  resize: both;
+  overflow: auto; /* ensures scrollbars appear when needed */
+}
+
+/* Optional: intensify glow on focus */
+#commento textarea:focus {
+  box-shadow: 0 0 10px #77dd77, 0 0 20px #77dd77, 0 0 40px #77dd77;
+}
+
+#commento button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #77dd77;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: #111;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  white-space: nowrap;
+  display: inline-block;
+  width: auto;
+}
+
+#commento button:hover {
+  background-color: #5cb85c;
+  transform: scale(1.05);
+}
+
+#commento-pre-comments-area {
+	margin: 3rem;
+}
+
+#commento-markdown-button-root {
+	padding: 1rem;
+}
+
+#commento-submit-button-root {
+	max-width: 80%;
+}
+
+/* ===========================
+   Commento Thread Styling
+   =========================== */
+.commento-root {
+  background: #111;
+  color: #eee;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  animation: fadeInUp 0.7s ease forwards;
+}
+
+.commento-root * {
+  box-sizing: border-box;
+}
+
+/* Individual comment container */
+.commento-comment {
+  background: #1e1e1e;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin: 15px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  transition: background-color 0.3s ease, transform 0.25s ease;
+}
+
+.commento-comment:hover {
+  background: #252525;
+  transform: translateY(-2px);
+}
+
+/* Author name */
+.commento-name {
+  color: #77dd77;
+  font-weight: 700;
+  margin-bottom: 6px;
+  display: block;
+  font-size: 1.1rem;
+  padding-top: 1rem;
+}
+
+/* Comment text */
+.commento-body {
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+/* Time + metadata */
+.commento-timeago {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 6px;
+  display: inline-block;
+}
+
+/* Reply / actions */
+.commento-footer button,
+.commento-footer a {
+  background: transparent;
+  border: none;
+  color: #77dd77;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 4px 8px;
+  margin-right: 8px;
+  border-radius: 6px;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.commento-footer button:hover,
+.commento-footer a:hover {
+  background-color: #77dd77;
+  color: #111;
+}
+
+/* Input fields */
+.commento-input,
+.commento-textarea {
+  background: #222;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 1rem;
+  color: #eee;
+  width: 100%;
+  transition: box-shadow 0.3s ease;
+}
+
+.commento-input:focus,
+.commento-textarea:focus {
+  outline: none;
+  box-shadow: 0 0 8px 2px #77dd77;
+}
+
+/* Submit button */
+.commento-submit-button {
+  margin-top: 12px;
+  background-color: #77dd77;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 10px 16px;
+  cursor: pointer;
+  color: #111;
+  transition: background-color 0.3s ease, transform 0.25s ease;
+}
+
+.commento-submit-button:hover {
+  background-color: #5cb85c;
+  transform: scale(1.05);
+}
+
+/* Fade in animation (reuse your fadeInUp) */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.commentSectionContainer h1 {
+	padding: 2rem;
+	text-align: center;
+}
+
+  </style>
+
 <script src="/main.js" defer></script>
 </body>
 </html>
-

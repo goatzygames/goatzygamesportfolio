@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-
-document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('.primary-nav .nav-list a');
 
   // Normalize pathname: remove trailing slash, default '/' to 'index'
