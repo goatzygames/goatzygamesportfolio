@@ -247,20 +247,14 @@ iframe {
   }
 </script>
 
-<div id="commento-container-${projectId}"></div>
+ <div class="commentSectionContainer">
+    <div class="commentsSection">
+    <h1>Comments</h1>
+    <div id="commento"></div>
+  </div>
 
-<script>
-  const commentoContainerId = "commento-container-" + projectId;
-  const commentoDiv = document.createElement("div");
-  commentoDiv.id = commentoContainerId;
-  document.body.appendChild(commentoDiv);
-
-  // Load Commento
-  const commentoScript = document.createElement("script");
-  commentoScript.src = "https://cdn.commento.io/js/commento.js";
-  commentoScript.defer = true;
-  document.body.appendChild(commentoScript);
-</script>
+  <script defer src="https://cdn.commento.io/js/commento.js"></script>
+ </div>
 
 
 	<style>
