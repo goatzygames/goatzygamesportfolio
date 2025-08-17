@@ -258,18 +258,17 @@ iframe {
 
 <script>
   if (project) {
+    // force a stable, unique thread ID per project
     const div = document.getElementById("commento");
-    div.setAttribute("data-page-id", "project-" + projectId);
+    div.setAttribute("data-page-id", "project-" + encodeURIComponent(projectId));
 
+    // load Commento AFTER setting data-page-id
     const s = document.createElement("script");
     s.src = "https://cdn.commento.io/js/commento.js";
     s.defer = true;
     document.body.appendChild(s);
   }
 </script>
-
-
-
 
 
 	<style>
