@@ -248,27 +248,33 @@ iframe {
   }
 </script>
 
-<div class="commentSectionContainer">
+<!-- <div class="commentSectionContainer">
   <div class="commentsSection">
     <h1>Project Comments</h1>
     <div id="commento" data-page-id=""></div>
   </div>
-</div>
+</div> -->
 
+
+<div id="commento" data-page-id=""></div>
 
 <script>
-  if (project) {
-    // force a stable, unique thread ID per project
-    const div = document.getElementById("commento");
-    div.setAttribute("data-page-id", "project-" + encodeURIComponent(projectId));
+  const params = new URLSearchParams(window.location.search);
+  const projectId = params.get("id");
 
-    // load Commento AFTER setting data-page-id
+  if (projectId) {
+    // Force a unique, encoded thread ID
+    document.getElementById("commento")
+      .setAttribute("data-page-id", "project-" + encodeURIComponent(projectId));
+
+    // Only load Commento AFTER the attribute is set
     const s = document.createElement("script");
     s.src = "https://cdn.commento.io/js/commento.js";
     s.defer = true;
     document.body.appendChild(s);
   }
 </script>
+
 
 
 	<style>
