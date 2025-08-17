@@ -232,7 +232,7 @@ function renderProjects(list) {
 el.addEventListener("click", () => {
   // Generate a unique HTML file name for each project
   const fileName = project.name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9\-]/g, '');
-  window.location.href = `/projects/${fileName}`;
+  window.location.href = `/${fileName}`;
 });
 
 
