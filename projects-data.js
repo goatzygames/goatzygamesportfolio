@@ -69,5 +69,20 @@ window.projects = [
 	  "/pics/invertnest-image3.png"
     ],
 	downloadUrl: "https://invertnest.eu"
+  },
+  {
+    name: "Jeopardy",
+    tags: ["jeopardy", "simple"],
+    date: "2025-04-02",
+    type: "game dev",
+    price: 0,
+    description: "A simple jeopardy game which I made in 1 day where you can customise everything, play them and so on. Currently it doesn't have a save file feature so you could save your custom made jeopardy games but if you'd want them to be implemented, you can let me know personally or in comments and I could do that for you. ",
+    videoUrl: "",
+    images: [
+      "/pics/invertnest-image1.png",
+      "/pics/invertnest-image2.png",
+	  "/pics/invertnest-image3.png"
+    ],
+	downloadUrl: ""
   }
 ];

@@ -229,10 +229,12 @@ function renderProjects(list) {
     `;
 
     el.style.cursor = "pointer";
-    el.addEventListener("click", () => {
-      // Redirect to project.html with name as a URL parameter
-      window.location.href = `/project?id=${encodeURIComponent(project.name)}`;
-    });
+el.addEventListener("click", () => {
+  // Generate a unique HTML file name for each project
+  const fileName = project.name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9\-]/g, '');
+  window.location.href = `/projects/${fileName}.html`;
+});
+
 
     container.appendChild(el);
   });
