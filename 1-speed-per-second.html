@@ -129,6 +129,42 @@ title: +1 Speed Per Second
     .tags { font-size: 0.8rem; }
     .price { font-size: 1.1rem; }
   }
+  
+  .site-header {
+  position: sticky;
+  top: 0;
+  background-color: rgba(17, 17, 17, 0.95);
+  backdrop-filter: saturate(180%) blur(12px);
+  border: 2px solid transparent;
+  border-radius: 12px;
+  margin: 10px auto; /* center horizontally */
+  padding: 0 20px; /* keep inner spacing */
+  width: calc(100% - 40px); /* keep 20px margin on each side */
+  max-width: 1400px; /* optional, matches PC width */
+  z-index: 999;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+  box-shadow:
+    0 -2px 6px rgba(119, 221, 119, 0.12),
+    0 0 10px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  height: 7rem;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+
+/* When scrolled, strengthen outline and keep top highlight */
+.site-header.scrolled {
+  border-color: #77dd77;
+  box-shadow:
+    0 -3px 8px rgba(119, 221, 119, 0.25), /* stronger faint green top shadow */
+    0 4px 15px rgba(119, 221, 119, 0.6);
+  background-color: rgba(20, 20, 20, 0.85);
+}
 </style>
 </head>
 <body>
@@ -154,6 +190,11 @@ title: +1 Speed Per Second
     <h1>+1 Speed Per Second</h1>
     <span class="price">Free</span>
   </div>
+  
+  
+  <div class="tags">
+    <em>TAGS: plus, one, speed, second</em>
+  </div>
 
   <img id="mainImage" class="main-image" src="/pics/plusonesps-image1.png" alt="Project Image">
 
@@ -173,10 +214,6 @@ title: +1 Speed Per Second
 <iframe src="YOUTUBE_EMBED_URL" title="YouTube video player" allowfullscreen></iframe>
 
  -->
-
-  <div class="tags">
-    <em><p>TAGS: plus, one, speed, second</p></em>
-  </div>
 
 
 <p><a href="" download class="download-link" target="_blank">⬇ Download / Open</a></p>
