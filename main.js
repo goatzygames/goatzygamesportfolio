@@ -49,19 +49,24 @@ document.addEventListener('DOMContentLoaded', () => {
   const navToggle = document.querySelector('.nav-toggle');
   const header = document.querySelector('.site-header');
 
-  navToggle.addEventListener('click', () => {
-    const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
-    navToggle.setAttribute('aria-expanded', !expanded);
-  });
+  if (navToggle) { // Only attach if navToggle exists
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
+      navToggle.setAttribute('aria-expanded', !expanded);
+    });
+  }
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 15) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
-  });
+  if (header) { // Only add scroll listener if header exists
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 15) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  }
 });
+
 
 const navToggle = document.querySelector('.nav-toggle');
 const header = document.querySelector('.site-header');
