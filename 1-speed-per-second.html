@@ -8,7 +8,7 @@ title: +1 Speed Per Second
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PROJECT_NAME - Goatzy Games</title>
+<title>Goatzy Games</title>
 <link rel="stylesheet" href="/style.css">
 
 <meta name="description" content="PROJECT_DESCRIPTION">
@@ -149,25 +149,25 @@ title: +1 Speed Per Second
 
 <div class="container">
   <div class="title">
-    <h1>PROJECT_NAME</h1>
-    <span class="price">PROJECT_PRICE</span>
+    <h1>+1 Speed Per Second</h1>
+    <span class="price">Free</span>
   </div>
 
   <img id="mainImage" class="main-image" src="MAIN_IMAGE_URL" alt="Project Image">
 
   <div class="gallery">
-    <img src="THUMB1_URL" onclick="changeImage(this)" class="active" alt="Gallery image 1">
-    <img src="THUMB2_URL" onclick="changeImage(this)" alt="Gallery image 2">
-    <img src="THUMB3_URL" onclick="changeImage(this)" alt="Gallery image 3">
+    <img src="/pics/plusonesps-image1.png" onclick="changeImage(this)" class="active" alt="Gallery image 1">
+    <img src="/pics/plusonesps-image2.png" onclick="changeImage(this)" alt="Gallery image 2">
+    <img src="/pics/plusonesps-image3.png" onclick="changeImage(this)" alt="Gallery image 3">
     <!-- Add more gallery images as needed -->
   </div>
 
   <div class="description">
-    <p>PROJECT_DESCRIPTION</p>
+    <p><em>+1 Speed Per Second</em> is a scrap project I made earlier this year as a scrap project just to try making different mechanisms to replicate a <em>ROBLOX</em> game which is somewhat similar to what I made.</p>
   </div>
 
   <div class="tags">
-    <p>TAGS: TAG1, TAG2, TAG3</p>
+    <p>plus, one, speed, second</p>
   </div>
 
   <iframe src="YOUTUBE_EMBED_URL" title="YouTube video player" allowfullscreen></iframe>
@@ -185,6 +185,299 @@ function changeImage(img) {
   img.classList.add('active');
 }
 </script>
+
+<div class="commentSectionContainer">
+  <div class="commentsSection">
+    <h1>Project Comments</h1>
+    <div id="commento"></div>
+  </div>
+</div>
+
+  <script defer src="https://cdn.commento.io/js/commento.js"></script>
+ </div>
+
+	<style>
+
+
+#commento textarea {
+  background-color: #000000;      /* input background */
+  color: #77dd77;                 /* text color */
+  border: 1px solid #77dd77;      /* optional neon border */
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 4px;
+  outline: none;
+
+  /* neon glow effect */
+  box-shadow: 0 0 5px #77dd77, 0 0 10px #77dd77, 0 0 20px #77dd77;
+  transition: box-shadow 0.3s ease;
+  
+  min-height: 2	rem;
+  resize: both;
+  overflow: auto; /* ensures scrollbars appear when needed */
+}
+
+/* Optional: intensify glow on focus */
+#commento textarea:focus {
+  box-shadow: 0 0 10px #77dd77, 0 0 20px #77dd77, 0 0 40px #77dd77;
+}
+
+#commento button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #77dd77;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: #111;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  white-space: nowrap;
+  display: inline-block;
+  width: auto;
+}
+
+#commento button:hover {
+  background-color: #5cb85c;
+  transform: scale(1.05);
+}
+
+#commento-pre-comments-area {
+	margin: 3rem;
+}
+
+#commento-markdown-button-root {
+	padding: 1rem;
+}
+
+#commento-submit-button-root {
+	max-width: 80%;
+}
+
+/* ===========================
+   Commento Thread Styling
+   =========================== */
+.commento-root {
+  background: #111;
+  color: #eee;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  animation: fadeInUp 0.7s ease forwards;
+}
+
+.commento-root * {
+  box-sizing: border-box;
+}
+
+/* Individual comment container */
+.commento-comment {
+  background: #1e1e1e;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin: 15px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  transition: background-color 0.3s ease, transform 0.25s ease;
+}
+
+.commento-comment:hover {
+  background: #252525;
+  transform: translateY(-2px);
+}
+
+/* Author name */
+.commento-name {
+  color: #77dd77;
+  font-weight: 700;
+  margin-bottom: 6px;
+  display: block;
+  font-size: 1.1rem;
+  padding-top: 1rem;
+}
+
+/* Comment text */
+.commento-body {
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+/* Time + metadata */
+.commento-timeago {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 6px;
+  display: inline-block;
+}
+
+/* Reply / actions */
+.commento-footer button,
+.commento-footer a {
+  background: transparent;
+  border: none;
+  color: #77dd77;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 4px 8px;
+  margin-right: 8px;
+  border-radius: 6px;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.commento-footer button:hover,
+.commento-footer a:hover {
+  background-color: #77dd77;
+  color: #111;
+}
+
+/* Input fields */
+.commento-input,
+.commento-textarea {
+  background: #222;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 1rem;
+  color: #eee;
+  width: 100%;
+  transition: box-shadow 0.3s ease;
+  padding-top: 10rem;
+}
+
+.commento-input:focus,
+.commento-textarea:focus {
+  outline: none;
+  box-shadow: 0 0 8px 2px #77dd77;
+}
+
+/* Submit button */
+.commento-submit-button {
+  margin-top: 12px;
+  background-color: #77dd77;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 10px 16px;
+  cursor: pointer;
+  color: #111;
+  transition: background-color 0.3s ease, transform 0.25s ease;
+}
+
+.commento-submit-button:hover {
+  background-color: #5cb85c;
+  transform: scale(1.05);
+}
+
+/* Fade in animation (reuse your fadeInUp) */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.commentSectionContainer h1 {
+	padding: 2rem;
+	text-align: center;
+}
+
+/* Commento Login Box */
+#commento-login-box {
+  max-width: 450px;
+  margin: 40px auto;
+  background-color: #222;
+  border-radius: 15px;
+  padding: 25px 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.7);
+  opacity: 0;
+  animation: fadeInUp 0.7s ease forwards;
+  animation-delay: 0.5s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  #commento-login-box {
+    margin: 20px;
+    padding: 20px 15px;
+  }
+}
+
+#commento-login-box h3 {
+  color: #77dd77;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#commento-login-box input[type="text"],
+#commento-login-box input[type="password"],
+#commento-login-box input[type="email"] {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background-color: #111;
+  color: #eee;
+  font-size: 1rem;
+  transition: box-shadow 0.3s ease;
+}
+
+#commento-login-box input:focus {
+  outline: none;
+  box-shadow: 0 0 8px 2px #77dd77;
+}
+
+#commento-login-box button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #77dd77;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #111;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#commento-login-box button:hover {
+  background-color: #5cb85c;
+  transform: scale(1.05);
+}
+
+#commento-login-box .login-footer {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+#commento-login-box .login-footer a {
+  color: #77dd77;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#commento-login-box .login-footer a:hover {
+  color: #55bb55;
+}
+
+.commento-email,
+.commento-email input,
+.commento-email textarea {
+    background-color: #222 !important;
+    color: #eee !important;
+}
+
+.commento-mod-tools-lock-button {
+	height: 2rem;
+}
+  </style>
 
 </body>
 </html>
