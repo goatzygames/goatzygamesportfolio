@@ -259,9 +259,6 @@ iframe {
 <div id="commento" data-page-id=""></div>
 
 <script>
-  const params = new URLSearchParams(window.location.search);
-  const projectId = params.get("id");
-
   if (projectId) {
     // Force a unique, encoded thread ID
     document.getElementById("commento")
