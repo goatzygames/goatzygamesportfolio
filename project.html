@@ -256,15 +256,18 @@ iframe {
 </div>
 
 <script>
-
   if (project) {
-    // assign the unique project id to the comment section BEFORE loading Commento
-    document.getElementById("commento").setAttribute("data-page-id", projectId);
+    const commentoDiv = document.getElementById("commento");
+    commentoDiv.setAttribute("data-page-id", projectId);
+
+    // dynamically load Commento script AFTER setting projectId
+    const s = document.createElement("script");
+    s.src = "https://cdn.commento.io/js/commento.js";
+    s.defer = true;
+    document.body.appendChild(s);
   }
 </script>
 
-<!-- load Commento AFTER setting data-page-id -->
-<script defer src="https://cdn.commento.io/js/commento.js"></script>
 
 
 
@@ -550,6 +553,7 @@ iframe {
 <script src="/main.js" defer></script>
 </body>
 </html>
+
 
 
 
