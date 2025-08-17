@@ -201,12 +201,6 @@ iframe {
 
 <script src="/projects-data.js"></script> <!-- shared data file -->
 
-	 <div class="commentSectionContainer">
-    <div class="commentsSection">
-    <h1>Project Comments</h1>
-    <p style="text-align: center; font-size: 1rem;">Note: these comments are global to all projects.</p>
-    <div id="commento"></div>
-  </div>
 <script>
   const params = new URLSearchParams(window.location.search);
   const projectId = params.get("id");
@@ -252,14 +246,26 @@ iframe {
       });
     }
   }
-
-  window.commento = {
-    pageId: projectId
-  };
 </script>
 
-  <script defer src="https://cdn.commento.io/js/commento.js"></script>
- </div>
+<div class="commentSectionContainer">
+  <div class="commentsSection">
+    <h1>Project Comments</h1>
+    <div id="commento"></div>
+  </div>
+</div>
+
+<script>
+
+  if (project) {
+    // assign the unique project id to the comment section BEFORE loading Commento
+    document.getElementById("commento").setAttribute("data-page-id", projectId);
+  }
+</script>
+
+<!-- load Commento AFTER setting data-page-id -->
+<script defer src="https://cdn.commento.io/js/commento.js"></script>
+
 
 
 	<style>
@@ -544,5 +550,6 @@ iframe {
 <script src="/main.js" defer></script>
 </body>
 </html>
+
 
 
