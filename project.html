@@ -200,6 +200,13 @@ iframe {
 </div>
 
 <script src="/projects-data.js"></script> <!-- shared data file -->
+
+	 <div class="commentSectionContainer">
+    <div class="commentsSection">
+    <h1>Project Comments</h1>
+    <p style="text-align: center; font-size: 1rem;">Note: these comments are global to all projects.</p>
+    <div id="commento"></div>
+  </div>
 <script>
   const params = new URLSearchParams(window.location.search);
   const projectId = params.get("id");
@@ -250,13 +257,6 @@ iframe {
     pageId: projectId
   };
 </script>
-
- <div class="commentSectionContainer">
-    <div class="commentsSection">
-    <h1>Project Comments</h1>
-    <p style="text-align: center; font-size: 1rem;">Note: these comments are global to all projects.</p>
-    <div id="commento"></div>
-  </div>
 
   <script defer src="https://cdn.commento.io/js/commento.js"></script>
  </div>
@@ -544,4 +544,5 @@ iframe {
 <script src="/main.js" defer></script>
 </body>
 </html>
+
 
