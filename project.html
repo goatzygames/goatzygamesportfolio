@@ -251,22 +251,23 @@ iframe {
 <div class="commentSectionContainer">
   <div class="commentsSection">
     <h1>Project Comments</h1>
-    <div id="commento"></div>
+    <div id="commento" data-page-id=""></div>
   </div>
 </div>
 
+
 <script>
   if (project) {
-    const commentoDiv = document.getElementById("commento");
-    commentoDiv.setAttribute("data-page-id", projectId);
+    const div = document.getElementById("commento");
+    div.setAttribute("data-page-id", "project-" + projectId);
 
-    // dynamically load Commento script AFTER setting projectId
     const s = document.createElement("script");
     s.src = "https://cdn.commento.io/js/commento.js";
     s.defer = true;
     document.body.appendChild(s);
   }
 </script>
+
 
 
 
