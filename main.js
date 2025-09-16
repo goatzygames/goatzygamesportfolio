@@ -163,7 +163,7 @@ window.projects = [
     tags: ["the", "last", "customer", "horror"],
     date: "2024-10-25",
     type: "game dev",
-    price: 5,
+    price: 4.99,
     description: "The Last Customer is a survival horror game where you play as a gas station clerk facing nightmarish creatures disguised as customers. Make quick decisions, manage resources, and uncover dark secrets to survive. Test your instincts and unravel the mystery before it's too late.<br><br>This also is my first big project ever, so I am not saying this is my proudest work ever, but it really helped me learn game dev more as it has a lot of different mechanics I think no one has yet discovered. ",
     videoUrl: "https://www.youtube.com/embed/m9KdQ1deXlo",
     images: [
