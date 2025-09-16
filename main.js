@@ -202,6 +202,20 @@ window.projects = [
 	  "/pics/invertnest-image3.png"
     ],
 	downloadUrl: "https://invertnest.eu"
+  },
+  {
+    name: "Crops vs Creeps",
+    tags: ["plants", "zombies", "vs"],
+    date: "2025-07-09",
+    type: "game dev",
+    price: 0,
+    description: "",
+    videoUrl: "",
+    images: [
+      "/pics/cropsvscreeps-image1.png",
+      "/pics/cropsvscreeps-image2.png"
+    ],
+	downloadUrl: "https://goatzy.games"
   }
 ]});
 //Projects Array End
