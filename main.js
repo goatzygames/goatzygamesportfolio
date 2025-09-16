@@ -212,8 +212,8 @@ window.projects = [
     description: "",
     videoUrl: "",
     images: [
-      "/pics/cropsvscreeps-image1.png",
-      "/pics/cropsvscreeps-image2.png"
+      "../pics/cropsvscreeps-image1.png",
+      "../pics/cropsvscreeps-image2.png"
     ],
 	downloadUrl: "https://goatzy.games"
   }
