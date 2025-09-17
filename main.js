@@ -206,7 +206,7 @@ window.projects = [
   {
     name: "Crops vs Creeps",
     tags: ["plants", "zombies", "vs"],
-    date: "2025-15-09",
+    date: "2025-09-15",
     type: "game dev",
     price: 0,
     description: "",
