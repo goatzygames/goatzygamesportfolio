@@ -1,145 +1,93 @@
----
-layout: none
-title: About
----
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="/style.css" />  
-  <!-- Basic SEO -->
-<title>Goatzy Games</title>
-<meta name="discord-domain-verification" content="897dfbc944b1a1e531a80c98b3069477725af8ce">
 
-<meta name="description" content="Portfolio for me, Goatzy Games, an indie developer using Unreal Engine 5 and C++. Here you can look at my projects and contact me personally or in comments!">
+  <title>Goatzy Games | About</title>
+  <link rel="stylesheet" href="/style.css" />
 
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Goatzy Games">
-<meta property="og:description" content="Portfolio for me, Goatzy Games, an indie developer using Unreal Engine 5 and C++. Here you can look at my projects and contact me personally or in comments!">
-<meta property="og:image" content="https://yourwebsite.com/preview-image.png">
-<meta property="og:url" content="https://goatzy.games">
+  <!-- SEO -->
+  <meta name="description" content="Portfolio for Goatzy Games, an indie developer using Unreal Engine 5 and C++. Explore projects, skills, and ways to connect.">
+  <meta name="discord-domain-verification" content="897dfbc944b1a1e531a80c98b3069477725af8ce">
 
-<!-- Twitter Card 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Goatzy Games">
-<meta name="twitter:description" content="ortfolio for me, Goatzy Games, an indie developer using Unreal Engine 5 and C++. Here you can look at my projects and contact me personally or in comments!">
-<meta name="twitter:image" content="https://yourwebsite.com/preview-image.png">
-<meta name="twitter:url" content="https://goatzy.games">
-<meta name="twitter:creator" content="@yourtwitterhandle"> -->
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Goatzy Games">
+  <meta property="og:description" content="Portfolio for Goatzy Games, an indie developer using Unreal Engine 5 and C++. Explore projects, skills, and ways to connect.">
+  <meta property="og:image" content="https://yourwebsite.com/preview-image.png">
+  <meta property="og:url" content="https://goatzy.games">
 
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Goatzy Games">
+  <meta name="twitter:description" content="Portfolio for Goatzy Games, an indie developer using Unreal Engine 5 and C++.">
+  <meta name="twitter:image" content="https://yourwebsite.com/preview-image.png">
+  <meta name="twitter:url" content="https://goatzy.games">
+  <meta name="twitter:creator" content="@yourtwitterhandle">
 </head>
 <body>
-<!-- Fiverr Popup -->
-<div id="fiverr-popup" class="popup-overlay hidden">
-  <div class="popup-box">
-    <h2>I’m on Fiverr now!</h2>
-    <p>Check out my gigs where I create small games in Unreal Engine 5.<br>
-    <a href="https://www.fiverr.com/akselpyss/create-an-unreal-engine-5-prototype" target="_blank">View my Fiverr Profile →</a></p>
-    <button id="close-popup">×</button>
-  </div>
-</div>
 
-<header class="site-header">
-  <div class="container header-container">
-    <a href="/index" class="site-logo" style="display: flex; justify-content: flex-start; text-decoration: none;">
-      <h1>Goatzy Games</h1>
-      <!-- <img src="pics/Goatzy_GamesLogoNOTEXT.png" style="width: 30%; height: auto;"> -->
-    </a>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="/index" class="site-logo">
+        <h1>Goatzy Games</h1>
+      </a>
 
-    <nav class="primary-nav" aria-label="Primary navigation" style="padding-bottom: 2%;">
-      <!-- Nav toggle button -->
-      <button
-        class="nav-toggle"
-        aria-controls="primary-menu"
-        aria-expanded="false"
-        aria-label="Toggle menu"
-      >
-        <span class="hamburger"></span>
-      </button>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <button class="nav-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle menu">
+          <span class="hamburger"></span>
+        </button>
+        <ul id="primary-menu" class="nav-list">
+          <li><a href="/index">Home</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/comments">Comments</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-      <!-- Nav list -->
-      <ul id="primary-menu" class="nav-list">
-        <li><a href="/index" class="active" aria-current="page">Home</a></li>
-        <li><a href="/projects">Projects</a></li>
-        <li><a href="/contact">Contact</a></li>
-		<li><a href="/comments">Comments</a></li>
-		
-      </ul>
-    </nav>
-  </div>
-</header>
+  <!-- PROFILE IMAGE + SCROLL BUTTON -->
+  <section class="intro">
+    <img src="/pics/Goatzy_GamesLogoNOTEXT.png" alt="Goatzy Games logo" class="profile-pic" />
+    <button id="scrollButton" class="bounce-btn" aria-label="Scroll down">⯆</button>
+  </section>
 
-<br>
-<img src="/pics/Goatzy_GamesLogoNOTEXT.png" alt="Profile Picture" class="profile-pic" style="margin-bottom: 18rem;"/>
-
-<button id="scrollButton" class="bounce-btn" aria-label="Scroll down" style="margin-top: 2rem;">
-  ⯆
-</button>
-
-<p id="aboutMeScroll"></p>
-
-<br><br><br><br>
-
+  <!-- MAIN CONTENT -->
   <main class="container" id="main-content" tabindex="-1">
-<section id="about-me" class="section-summary" aria-labelledby="about-me-title">
-  <h2 id="about-me-title" class="section-title">About Me</h2>
-  <div class="about-content">
-    <p>
-      Hello, I'm <strong>Goatzy Games</strong>, and I am an indie game developer making a variety of games in <em>Unreal Engine 5</em> with <em>C++</em> and also websites with <em>HTML</em>, <em>CSS</em> and <em>Javascript</em>, but I am not focused on that, currently.  
-      <br>I have a strong passion for creating stuff and because of that I love creating different games and websites. 
-    </p>
-    <p>
-      I have 3+ years of experience by now with <em>Unreal Engine 5</em> and I do this as just a hobby for now and sometimes when I want to create something big, like I'm doing right now, I'll make sure the game is ready for even Steam release. Although I'm working on everything by myself, like the coding, level design etc, sometimes I even need to hire someone to do some 3D modeling/animating or just anything art related since I once tried learning blender but the outcome was terrible so I just decided to purely focus on level design and gameplay programming. 
-    </p>
-    <p>
-      You can look at my completed projects in <em><a href="/projects" style="
-    all: unset;              /* remove all default and CSS-applied styles */
-    background: none !important;  /* remove any background color or image */
-    border: none !important;      /* remove any border */
-    padding: 0 !important;        /* remove padding */
-    margin: 0 !important;         /* remove margin */
-    text-decoration: none !important; /* remove underline */
-    font: inherit !important;     /* inherit font styling */
-	cursor: pointer;
-	font-weight: 1000;
-">projects</a></em> and if you would like to discuss collaborating or anything else, you can contact me <a href="/contact">here</a>.
-    </p>
-    <!--Learn More About Me BUTTON: <a href="index.html#about-me" class="btn-read-more" aria-describedby="about-me-title">Learn More About Me</a> -->
-  </div>
-</section>
 
+    <section id="about-me" class="section-summary" aria-labelledby="about-me-title">
+      <h2 id="about-me-title" class="section-title">About Me</h2>
+      <div class="about-content">
+        <p>Hello, I'm <strong>Goatzy Games</strong>, an indie developer creating games in <em>Unreal Engine 5</em> with <em>C++</em>, as well as websites with <em>HTML</em>, <em>CSS</em>, and <em>JavaScript</em>.</p>
+        <p>I have over 3 years of experience with Unreal Engine and focus on coding and level design. While I work solo on most projects, I sometimes hire artists for 3D models or animations.</p>
+        <p>Check out my <a href="/projects">projects</a> or <a href="/contact">contact me</a> if you’d like to collaborate.</p>
+      </div>
+    </section>
 
     <section id="skills" class="section-summary" aria-labelledby="skills-title">
-      <h2 id="skills-title">Skills</h2>
-      <strong>
-        Unreal Engine 5, C++, HTML/CSS/Javascript
-      </strong><br><br>
-	  <p>
-	  4+ years of experience in <em>Unreal Engine 5</em> and about 2 years of experience with <em>C++</em>
-	  </p>
+      <h2 id="skills-title" class="section-title">Skills</h2>
+      <p><strong>Unreal Engine 5</strong>, <strong>C++</strong>, <strong>HTML/CSS/JavaScript</strong></p>
+      <p>4+ years with Unreal Engine 5 and 2+ years with C++.</p>
     </section>
 
     <section id="projects" class="section-summary" aria-labelledby="projects-title">
-      <h2 id="projects-title">Projects</h2>
-      <p>
-        Created <em>The Last Customer</em>, a horror-puzzle game, and currently developing a Geometry Dash style game.
-      </p>
+      <h2 id="projects-title" class="section-title">Projects</h2>
+      <p>Creator of <em>The Last Customer</em> (horror-puzzle) and currently working on a Geometry Dash–style game.</p>
       <a href="/projects" class="read-more-link" aria-describedby="projects-title">See all projects</a>
     </section>
 
     <section id="contact" class="section-summary" aria-labelledby="contact-title">
-      <h2 id="contact-title">Contact</h2>
-      <p>
-        Want to collaborate/get in touch? Contact me!
-      </p>
+      <h2 id="contact-title" class="section-title">Contact</h2>
+      <p>Want to collaborate or get in touch? Let’s connect!</p>
       <a href="/contact" class="read-more-link" aria-describedby="contact-title">Contact me</a>
     </section>
+
   </main>
 
+  <!-- FOOTER -->
   <footer>
     <div class="container footer-container">
       <p>&copy; 2025 Goatzy Games. All rights reserved.</p>
@@ -149,4 +97,3 @@ title: About
   <script src="/main.js" defer></script>
 </body>
 </html>
-
