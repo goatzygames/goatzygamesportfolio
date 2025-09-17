@@ -145,7 +145,7 @@ window.projects = [
       "/pics/flappyvhs-image2.png",
       "/pics/flappyvhs-image3.png"
     ],
-	downloadUrl: "https://goatzy.games/flappy-vhs"
+	downloadUrl: "https://goatzy.games/projects/flappy-vhs"
   },
   {
     name: "Portfolio Website",
@@ -156,7 +156,7 @@ window.projects = [
     description: "This is the website you're currently on, this is my proudest web development work yet.",
     videoUrl: "",
     images: ["/pics/goatzy.games-image1.png"],
-	downloadUrl: "https://www.goatzy.games/portfolio-website"
+	downloadUrl: "https://www.goatzy.games/projects/portfolio-website"
   },
   {
     name: "The Last Customer",
@@ -171,7 +171,7 @@ window.projects = [
       "/pics/thelastcustomer-image2.jpg",
 	  "/pics/thelastcustomer-image3.jpg"
     ],
-	downloadUrl: "https://goatzy.games/the-last-customer"
+	downloadUrl: "https://goatzy.games/projects/the-last-customer"
   },
   {
     name: "+1 Speed Per Second",
@@ -186,7 +186,7 @@ window.projects = [
       "/pics/plusonesps-image2.png",
 	  "/pics/plusonesps-image3.png"
     ],
-	downloadUrl: "https://goatzy.games/1-speed-per-second"
+	downloadUrl: "https://goatzy.games/projects/1-speed-per-second"
   },
   {
     name: "Invert Nest",
@@ -201,7 +201,7 @@ window.projects = [
       "/pics/invertnest-image2.png",
 	  "/pics/invertnest-image3.png"
     ],
-	downloadUrl: "https://goatzy.games/invert-nest"
+	downloadUrl: "https://goatzy.games/projects/invert-nest"
   },
   {
     name: "Crops vs Creeps",
@@ -215,7 +215,7 @@ window.projects = [
       "../pics/cropsvscreeps-image1.png",
       "../pics/cropsvscreeps-image2.png"
     ],
-	downloadUrl: "https://goatzy.games/crops-vs-creeps"
+	downloadUrl: "https://goatzy.games/projects/crops-vs-creeps"
   }
 ]});
 //Projects Array End
