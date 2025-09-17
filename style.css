@@ -1127,3 +1127,26 @@ select:focus {
     height: 180px;
   }
 }
+
+.project-preview {
+  margin-top: 0.5rem;
+}
+
+.project-preview .project-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #cfeee0;
+  margin-bottom: 0.4rem;
+}
+
+.project-preview .project-description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 0.6rem;
+}
+
+.project-preview .project-thumb {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 0.8rem;
+}

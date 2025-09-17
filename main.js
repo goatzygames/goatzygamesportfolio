@@ -307,3 +307,33 @@ document.addEventListener("DOMContentLoaded", () => {
   // Run immediately after DOM is ready
   filterAndSort();
 });
+
+// Inject latest project into the About page
+(function () {
+  if (!window.projects || !Array.isArray(window.projects)) return;
+
+  // Sort projects by date (newest first)
+  const sorted = [...window.projects].sort(
+    (a, b) => new Date(b.date) - new Date(a.date)
+  );
+
+  const latest = sorted[0];
+  const container = document.getElementById("latest-project");
+  if (!latest || !container) return;
+
+  // Build project HTML
+  container.innerHTML = `
+    <h4 class="project-name">${latest.name}</h4>
+    <p class="project-description">${latest.description}</p>
+    ${
+      latest.images && latest.images.length
+        ? `<img src="${latest.images[0]}" alt="${latest.name} preview" class="project-thumb">`
+        : ""
+    }
+    ${
+      latest.downloadUrl
+        ? `<p><a href="${latest.downloadUrl}" class="btn btn-outline" target="_blank" rel="noopener">View / Download</a></p>`
+        : ""
+    }
+  `;
+})();
