@@ -130,7 +130,7 @@ window.addEventListener('touchstart', handleFirstScroll, { passive: false });
 	
 document.addEventListener("DOMContentLoaded", () => {
 
-//Projects Array
+// Projects Array
 window.projects = [
   {
     name: "Flappy VHS",
@@ -145,7 +145,7 @@ window.projects = [
       "/pics/flappyvhs-image2.png",
       "/pics/flappyvhs-image3.png"
     ],
-	downloadUrl: "https://drive.google.com/file/d/1O5K4_76QB5_tsD1SdasyLQnY-DndHd3x/view?usp=sharing"
+    downloadUrl: "https://drive.google.com/file/d/1O5K4_76QB5_tsD1SdasyLQnY-DndHd3x/view?usp=sharing"
   },
   {
     name: "Portfolio Website",
@@ -156,7 +156,7 @@ window.projects = [
     description: "This is the website you're currently on, this is my proudest web development work yet.",
     videoUrl: "",
     images: ["/pics/goatzy.games-image1.png"],
-	downloadUrl: "https://www.goatzy.games"
+    downloadUrl: "https://www.goatzy.games"
   },
   {
     name: "The Last Customer",
@@ -164,14 +164,14 @@ window.projects = [
     date: "2024-10-25",
     type: "game dev",
     price: 4.99,
-    description: "The Last Customer is a survival horror game where you play as a gas station clerk facing nightmarish creatures disguised as customers. Make quick decisions, manage resources, and uncover dark secrets to survive. Test your instincts and unravel the mystery before it's too late.<br><br>This also is my first big project ever, so I am not saying this is my proudest work ever, but it really helped me learn game dev more as it has a lot of different mechanics I think no one has yet discovered. ",
+    description: "The Last Customer is a survival horror game where you play as a gas station clerk facing nightmarish creatures disguised as customers. Make quick decisions, manage resources, and uncover dark secrets to survive. Test your instincts and unravel the mystery before it's too late.<br><br>This also is my first big project ever, so I am not saying this is my proudest work ever, but it really helped me learn game dev more as it has a lot of different mechanics I think no one has yet discovered.",
     videoUrl: "https://www.youtube.com/embed/m9KdQ1deXlo",
     images: [
       "/pics/thelastcustomer-image1.jpg",
       "/pics/thelastcustomer-image2.jpg",
-	  "/pics/thelastcustomer-image3.jpg"
+      "/pics/thelastcustomer-image3.jpg"
     ],
-	downloadUrl: "https://store.steampowered.com/app/3249630/The_Last_Customer"
+    downloadUrl: "https://store.steampowered.com/app/3249630/The_Last_Customer"
   },
   {
     name: "+1 Speed Per Second",
@@ -184,9 +184,9 @@ window.projects = [
     images: [
       "/pics/plusonesps-image1.png",
       "/pics/plusonesps-image2.png",
-	  "/pics/plusonesps-image3.png"
+      "/pics/plusonesps-image3.png"
     ],
-	downloadUrl: "/contact"
+    downloadUrl: "/contact"
   },
   {
     name: "Invert Nest",
@@ -194,19 +194,19 @@ window.projects = [
     date: "2025-07-09",
     type: "web dev",
     price: 0,
-    description: "A web development project I made mainly for fun to try to create this cool local marketplace for my area for selling animal supplies, and as the name suggests, mainly pet invertebrate supplies. It really didn't caught on as well as I expected honestly. The website is <strong>not</strong> being maintained and does not work at the moment. ",
+    description: "A web development project I made mainly for fun to try to create this cool local marketplace for my area for selling animal supplies, and as the name suggests, mainly pet invertebrate supplies. It really didn't caught on as well as I expected honestly. The website is <strong>not</strong> being maintained and does not work at the moment.",
     videoUrl: "",
     images: [
       "/pics/invertnest-image1.png",
       "/pics/invertnest-image2.png",
-	  "/pics/invertnest-image3.png"
+      "/pics/invertnest-image3.png"
     ],
-	downloadUrl: "https://invertnest.eu"
+    downloadUrl: "https://invertnest.eu"
   },
   {
     name: "Crops vs Creeps",
     tags: ["plants", "zombies", "vs"],
-    date: "2025-15-09",
+    date: "2025-09-15",
     type: "game dev",
     price: 0,
     description: "",
@@ -215,10 +215,9 @@ window.projects = [
       "../pics/cropsvscreeps-image1.png",
       "../pics/cropsvscreeps-image2.png"
     ],
-	downloadUrl: "https://goatzy.games"
+    downloadUrl: "https://goatzy.games"
   }
-]});
-//Projects Array End
+]; // Projects Array End
 
 function renderProjects(list) {
   const container = document.getElementById("projectList");
