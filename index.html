@@ -177,33 +177,6 @@ title: About
   </section> <!-- /.about-area -->
 </main>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  if (!window.projects || window.projects.length === 0) return;
-
-  // Sort by date (newest first)
-  const sorted = [...window.projects].sort((a, b) => new Date(b.date) - new Date(a.date));
-
-  // Take the latest
-  const latest = sorted[0];
-
-  // Render latest project into container
-  const container = document.getElementById("latest-project-container");
-  if (container && latest) {
-    container.innerHTML = `
-      <div class="project-card">
-        <h3>${latest.name}</h3>
-        <p>${latest.description}</p>
-        ${latest.images?.length ? `<img src="${latest.images[0]}" alt="${latest.name}">` : ""}
-        ${latest.videoUrl ? `<iframe src="${latest.videoUrl}" frameborder="0" allowfullscreen></iframe>` : ""}
-        <a href="${latest.downloadUrl}" target="_blank" class="btn">View Project</a>
-      </div>
-    `;
-  }
-});
-
-</script>
-
   <footer>
     <div class="container footer-container">
       <p>&copy; 2025 Goatzy Games. All rights reserved.</p>
