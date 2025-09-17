@@ -307,18 +307,3 @@ document.addEventListener("DOMContentLoaded", () => {
   // Run immediately after DOM is ready
   filterAndSort();
 });
-
-document.addEventListener("DOMContentLoaded", () => {
-  const popup = document.getElementById("fiverr-popup");
-  const closeBtn = document.getElementById("close-popup");
-
-  // Only show once
-  if (!localStorage.getItem("fiverrPopupShown")) {
-    popup.classList.remove("hidden");
-    localStorage.setItem("fiverrPopupShown", "true");
-  }
-
-  closeBtn.addEventListener("click", () => {
-    popup.classList.add("hidden");
-  });
-});

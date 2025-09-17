@@ -76,63 +76,105 @@ title: About
 <br><br><br><br>
 
 <main class="container" id="main-content" tabindex="-1">
+  <section class="about-area" aria-label="About area">
 
-  <!-- About Me -->
-  <section id="about-me" class="section-summary" aria-labelledby="about-me-title">
-    <h2 id="about-me-title" class="section-title">About Me</h2>
-    <div class="about-content">
-      <p>
-        Hello, I’m <strong>Goatzy Games</strong>, an indie developer passionate about creating unique games in 
-        <em>Unreal Engine 5</em> using <em>C++</em>. I also work with <em>HTML</em>, <em>CSS</em>, and 
-        <em>JavaScript</em> for web projects, though my main focus is on game development.
-      </p>
-      <p>
-        I have over <strong>3 years of experience</strong> with Unreal Engine and am dedicated to designing gameplay 
-        systems, coding mechanics, and developing immersive experiences. While I handle most aspects of development myself, 
-        I occasionally collaborate with 3D artists or animators to bring my projects to life.
-      </p>
-      <p>
-        You can explore my completed and ongoing projects in the 
-        <a href="/projects" class="inline-link">Projects</a> section.  
-        If you’re interested in collaborating or discussing ideas, feel free to 
-        <a href="/contact" class="inline-link">get in touch</a>.
-      </p>
-    </div>
-  </section>
+    <!-- PROFILE ROW: left = profile card, right = about card -->
+    <div class="profile-grid" role="group" aria-labelledby="about-me-title">
 
-  <!-- Skills -->
-  <section id="skills" class="section-summary" aria-labelledby="skills-title">
-    <h2 id="skills-title">Skills</h2>
-    <ul class="skills-list">
-      <li><strong>Game Development:</strong> Unreal Engine 5 (4+ years), C++ (2+ years)</li>
-      <li><strong>Web Development:</strong> HTML, CSS, JavaScript</li>
-      <li><strong>Focus Areas:</strong> Gameplay programming, system design, level design</li>
-    </ul>
-  </section>
+      <!-- Profile card (compact contact + avatar) -->
+      <aside class="profile-card card" aria-labelledby="profile-title">
+        <img src="/pics/Goatzy_GamesLogoNOTEXT.png"
+             alt="Goatzy Games logo — profile image"
+             class="profile-pic" />
 
-  <!-- Projects -->
-  <section id="projects" class="section-summary" aria-labelledby="projects-title">
-    <h2 id="projects-title">Projects</h2>
-    <p>
-      Some of my key projects include:
-    </p>
-    <ul>
-      <li><em>The Last Customer</em> – a horror-puzzle experience with strategy elements.</li>
-      <li>Geometry Dash–inspired game – currently in development.</li>
-    </ul>
-    <a href="/projects" class="read-more-link" aria-describedby="projects-title">View all projects</a>
-  </section>
+        <div class="profile-meta">
+          <h3 id="profile-title" class="profile-name">Goatzy Games</h3>
+          <p class="profile-tagline">Indie developer — Unreal Engine 5 · C++ · Gameplay</p>
 
-  <!-- Contact -->
-  <section id="contact" class="section-summary" aria-labelledby="contact-title">
-    <h2 id="contact-title">Contact</h2>
-    <p>
-      I’m always open to new opportunities, collaborations, and discussions.  
-      Reach out through my <a href="/contact" class="inline-link">contact page</a>.
-    </p>
-  </section>
+          <ul class="quick-stats" aria-hidden="false">
+            <li><strong>Experience</strong> — 4+ years UE5</li>
+            <li><strong>C++</strong> — 2+ years</li>
+            <li><strong>Availability</strong> — Open to collaboration</li>
+          </ul>
 
+          <nav class="profile-actions" aria-label="Profile actions">
+            <a class="btn" href="/projects">Projects</a>
+            <a class="btn btn-outline" href="/contact">Contact</a>
+          </nav>
+        </div>
+      </aside>
+
+      <!-- About card (longer introduction) -->
+      <section class="about-card card" aria-labelledby="about-me-title">
+        <h2 id="about-me-title" class="section-title">About Me</h2>
+
+        <div class="about-content">
+          <p>
+            Hello — I’m <strong>Goatzy Games</strong>, an indie developer focused on creating memorable gameplay
+            experiences with <em>Unreal Engine 5</em> and <em>C++</em>. I also build lightweight web tools and pages
+            with <em>HTML</em>, <em>CSS</em>, and <em>JavaScript</em>, but my primary focus is game development.
+          </p>
+
+          <p>
+            I design systems and gameplay mechanics, implement them in C++, and iterate until they feel right.
+            I ship prototypes quickly, polish core interactions, and — when needed — collaborate with artists for
+            models or animation.
+          </p>
+
+          <dl class="brief">
+            <div>
+              <dt>Primary focus</dt>
+              <dd>Gameplay programming · system architecture · level scripting</dd>
+            </div>
+            <div>
+              <dt>Tooling</dt>
+              <dd>Unreal Engine 5 · Visual Studio · Git</dd>
+            </div>
+            <div>
+              <dt>Goal</dt>
+              <dd>Publish well-polished indie titles (Steam-ready when complete)</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+    </div> <!-- /.profile-grid -->
+
+    <!-- SECOND ROW: cards for skills, projects, contact -->
+    <div class="cards-grid" role="list">
+
+      <article id="skills" class="card" role="listitem" aria-labelledby="skills-title">
+        <h3 id="skills-title" class="card-title">Skills</h3>
+        <ul class="skills-list" aria-describedby="skills-title">
+          <li><strong>Unreal Engine 5</strong> — gameplay systems, actors, Blueprints & C++ integration</li>
+          <li><strong>C++</strong> — architecture, performance-aware code, gameplay modules</li>
+          <li><strong>Web</strong> — HTML, CSS, JavaScript (for tooling / portfolio)</li>
+        </ul>
+      </article>
+
+      <article id="projects" class="card" role="listitem" aria-labelledby="projects-title">
+        <h3 id="projects-title" class="card-title">Selected Projects</h3>
+        <ul class="project-list">
+          <li><strong>The Last Customer</strong> — horror-puzzle (solo-developed, gameplay + systems)</li>
+          <li><strong>Geometry Dash–style</strong> — rhythm/platform prototype (in development)</li>
+        </ul>
+        <a href="/projects" class="read-more-link" aria-label="View all projects">View all projects</a>
+      </article>
+
+      <article id="contact" class="card" role="listitem" aria-labelledby="contact-title">
+        <h3 id="contact-title" class="card-title">Contact</h3>
+        <p>
+          I’m available for collaborations, contract work, and feedback sessions. Use the contact page for
+          enquiries, or link directly to a message on the project page.
+        </p>
+        <a href="/contact" class="read-more-link" aria-label="Contact Goatzy Games">Contact me</a>
+      </article>
+
+    </div> <!-- /.cards-grid -->
+
+  </section> <!-- /.about-area -->
 </main>
+
 
 
   <footer>

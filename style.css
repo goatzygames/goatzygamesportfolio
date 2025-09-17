@@ -942,3 +942,188 @@ select:focus {
 #close-popup:hover {
   color: #fff;
 }
+
+/* ---------- About-area boxed layout (append to style.css) ---------- */
+
+.about-area {
+  margin-top: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+/* PROFILE GRID */
+.about-area .profile-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+/* Generic card base (scoped) */
+.about-area .card {
+  background: #1e1e1e;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  color: #ddd;
+}
+
+/* PROFILE CARD */
+.about-area .profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+}
+
+.about-area .profile-pic {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 5px solid #77dd77;
+  object-fit: cover;
+  box-shadow: 0 0 18px rgba(119,221,119,0.12), inset 0 0 16px rgba(0,0,0,0.25);
+  transition: transform 0.25s ease;
+}
+
+.about-area .profile-pic:hover,
+.about-area .profile-pic:focus {
+  transform: scale(1.04);
+}
+
+/* Profile meta */
+.about-area .profile-name {
+  font-size: 1.45rem;
+  color: #a8f4a8;
+  margin-top: 4px;
+}
+
+.about-area .profile-tagline {
+  color: #cfeee0;
+  font-weight: 600;
+  font-size: 0.98rem;
+  opacity: 0.95;
+}
+
+/* Quick stats list */
+.about-area .quick-stats {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 12px;
+  color: #cddfd0;
+  font-size: 0.95rem;
+  display: grid;
+  gap: 6px;
+}
+
+/* Action buttons */
+.about-area .profile-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+  width: 100%;
+  justify-content: center;
+}
+
+.about-area .btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background-color: #77dd77;
+  color: #111;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 6px 14px rgba(119,221,119,0.08);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.about-area .btn:hover,
+.about-area .btn:focus {
+  transform: translateY(-2px);
+}
+
+.about-area .btn.btn-outline {
+  background: transparent;
+  border: 2px solid #77dd77;
+  color: #77dd77;
+}
+
+/* ABOUT CARD */
+.about-area .about-card .brief {
+  margin-top: 12px;
+  display: grid;
+  gap: 10px;
+  color: #d6eee6;
+}
+
+.about-area .about-card .brief dt {
+  font-weight: 700;
+  color: #9feebab;
+}
+
+.about-area .about-card .brief dd {
+  margin-left: 0;
+  color: #cfeee0;
+}
+
+/* CARDS GRID (skills / projects / contact) */
+.about-area .cards-grid {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Card titles smaller to fit the grid */
+.about-area .card-title {
+  font-size: 1.2rem;
+  color: #77dd77;
+  margin-bottom: 10px;
+}
+
+/* Read-more link */
+.about-area .read-more-link {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 14px;
+  border-radius: 12px;
+  background: transparent;
+  border: 2px solid #77dd77;
+  color: #77dd77;
+  font-weight: 700;
+  text-decoration: none;
+  transition: box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.about-area .read-more-link:hover,
+.about-area .read-more-link:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(119,221,119,0.08);
+  background: #77dd77;
+  color: #111;
+}
+
+/* Skills / project list styles */
+.about-area .skills-list,
+.about-area .project-list {
+  list-style: none;
+  padding: 0;
+  margin: 6px 0 0;
+  line-height: 1.5;
+  color: #d6eede;
+}
+
+/* Responsive: stack columns on smaller screens */
+@media (max-width: 900px) {
+  .about-area .profile-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .about-area .cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-area .profile-pic {
+    width: 180px;
+    height: 180px;
+  }
+}
