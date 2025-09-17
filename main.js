@@ -236,7 +236,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="project-card">
         <h3>${latest.name}</h3>
         <p>${latest.description}</p>
-        ${latest.images?.length ? `<img src="${latest.images[0]}" alt="${latest.name}">` : ""}
+        ${latest.images?.length ? `<img src="${latest.images[0]}" alt="${latest.name}" style="width:50%;">` : ""}
         ${latest.videoUrl ? `<iframe src="${latest.videoUrl}" frameborder="0" allowfullscreen></iframe>` : ""}
         <a href="${latest.downloadUrl}" target="_blank" class="btn">View Project</a>
       </div>
