@@ -1150,3 +1150,25 @@ select:focus {
   border-radius: 10px;
   margin-bottom: 0.8rem;
 }
+
+#special-img {
+  display: block;
+  max-width: 100%;       /* responsive images */
+  height: auto;
+  margin: 20px auto;     /* center horizontally with spacing */
+  border-radius: 1.5rem; /* rounded corners, fits your card/section style */
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.6),   /* deep shadow for depth */
+    0 0 20px #77dd77aa;               /* subtle neon glow matching main accent */
+  transition: 
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  cursor: pointer;       /* makes it interactive/hoverable */
+}
+
+#special-img:hover {
+  transform: scale(1.05);        /* subtle zoom on hover */
+  box-shadow: 
+    0 6px 18px rgba(0,0,0,0.7), 
+    0 0 28px #77dd77cc;          /* intensified glow on hover */
+}
