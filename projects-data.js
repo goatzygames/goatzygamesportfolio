@@ -84,5 +84,19 @@ window.projects = [
 	  "/pics/invertnest-image3.png"
     ],
 	downloadUrl: ""
+  },
+  {
+    name: "SnaiboScript",
+    tags: ["snaibo", "script"],
+    date: "2025-10-15",
+    type: "game dev",
+    price: 0,
+    description: "",
+    videoUrl: "",
+    images: [
+      "../pics/cropsvscreeps-image1.png",
+      "../pics/cropsvscreeps-image2.png"
+    ],
+	downloadUrl: "https://goatzy.games/projects/snaibo"
   }
 ];
