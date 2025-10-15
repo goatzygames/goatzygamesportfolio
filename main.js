@@ -218,7 +218,7 @@ window.projects = [
 	downloadUrl: "https://goatzy.games/projects/crops-vs-creeps"
   },
   {
-    name: "SnaiboScript",
+    name: "Snaibo",
     tags: ["snaibo", "script"],
     date: "2025-10-15",
     type: "game dev",
@@ -226,8 +226,9 @@ window.projects = [
     description: "",
     videoUrl: "",
     images: [
-      "../pics/cropsvscreeps-image1.png",
-      "../pics/cropsvscreeps-image2.png"
+      "../pics/snaibo-1.png",
+      "../pics/snaibo-2.png",
+	  "../pics/snaibo-3.png"
     ],
 	downloadUrl: "https://goatzy.games/projects/snaibo"
   }
