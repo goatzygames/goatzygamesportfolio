@@ -1,192 +1,119 @@
----
-layout: none
-title: Beta Progress
----
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <link rel="stylesheet" href="/style.css" />  
-  <title>Goatzy Games — Beta Progress</title>
-  <meta name="description" content="Beta progress, known bugs, and updates for our mobile game. Designed for beta testers.">
-</head>
-<body>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
-    <style>
-/* Import custom font */
+<style>
 @font-face {
     font-family: 'Pixellari';
     src: url('/extras/Pixellari.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
 }
 
-/* Body transparent */
-body {
+/* Transparent base for UE */
+html, body {
     margin: 0;
     padding: 0;
+    background: transparent;
     font-family: 'Pixellari', sans-serif;
-    background-color: transparent; /* <-- key for transparency */
-    color: #111111;
+    color: white;
 }
 
-/* Container cards with semi-transparent background */
-.card {
-    background-color: rgba(249, 249, 249, 0.85); /* 85% opacity */
-    border: 2px solid rgba(200, 200, 200, 0.5);
-    border-radius: 8px;
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-}
-
-
+/* Container */
 .container {
-    width: 90%;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem 0;
+    width: 100%;
+    padding: 8px;
 }
 
-/* Profile / Logo */
-.profile-pic {
-    display: block;
-    max-width: 120px;
-    margin: 0 auto 2rem auto;
+/* Row */
+.cards-row {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
 }
 
+/* Card = simple text block */
+.card {
+    padding: 6px 8px;
+    max-width: 220px;
+}
 
+/* Outlined text (UE Chromium friendly) */
+.card-title,
+.card li {
+    color: #ffffff;
+    -webkit-text-stroke: 1.5px #000;
+    paint-order: stroke fill;
+
+    /* Fallback outline for safety */
+    text-shadow:
+        1px 1px 0 #000,
+       -1px 1px 0 #000,
+        1px -1px 0 #000,
+       -1px -1px 0 #000;
+}
+
+/* Title */
 .card-title {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #222;
+    font-size: 14px;
+    margin: 0 0 4px 0;
     text-align: center;
 }
 
-/* Lists */
+/* List */
 ul {
-    list-style: disc;
-    padding-left: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 li {
-    margin-bottom: 0.8rem;
+    font-size: 11px;
+    line-height: 1.3;
+    margin-bottom: 2px;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 1.5rem 0;
-    font-size: 0.9rem;
-    color: #555;
-    border-top: 1px solid #ddd;
-}
-
-/* Responsive adjustments */
-@media (max-width: 500px) {
-    .container {
-        width: 95%;
-        padding: 1rem 0;
-    }
-    .card-title {
-        font-size: 1.3rem;
-    }
-}
-
-html, body {
-    height: 100%;           /* Make HTML and body fill viewport */
-    margin: 0;
-    padding: 0;
-    font-family: 'Pixellari', sans-serif;
-    background-color: transparent;
-    color: #111111;
-}
-
+/* No scrollbars in UE */
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;       /* Ensure body is at least full height */
+    overflow: hidden;
 }
-
-/* Make main container expand to fill height */
-main.container {
-    flex: 1 0 auto;         /* Grow to fill remaining space */
-}
-
-.cards-row {
-    display: flex;                /* arrange children side by side */
-    flex-wrap: wrap;              /* wrap to next line on small screens */
-    gap: 1.5rem;                  /* space between cards */
-    justify-content: center;      /* center the row horizontally */
-}
-
-.cards-row .card {
-    flex: 1 1 250px;              /* grow/shrink, min width 250px */
-    max-width: 300px;             /* optional, keeps cards readable */
-    margin-bottom: 1.5rem;
-}
-
-.cards-row .card {
-    background-color: rgba(249, 249, 249, 0.85);
-}
-.cards-row .card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 10px rgba(0,0,0,0.1);
-    transition: all 0.2s ease;
-}
-
-/* Hide scrollbar for all browsers */
-body::-webkit-scrollbar {
-    width: 0px;   /* removes scrollbar width for Chrome, Edge, Safari */
-    background: transparent; /* optional: hide background */
-}
-
-body {
-    scrollbar-width: none;  /* Firefox */
-    -ms-overflow-style: none; /* IE 10+ */
-    overflow-y: scroll; /* still allow scrolling */
-}
-
-
 </style>
+</head>
 
-<main class="container" id="main-content" tabindex="-1">
+<body>
+<main class="container">
 
-  <div class="cards-row"> <!-- new wrapper for flex -->
-    <!-- Progress Section -->
-    <section class="card" aria-labelledby="progress-title">
-      <h2 id="progress-title" class="card-title">In Progress</h2>
+  <div class="cards-row">
+
+    <section class="card">
+      <h2 class="card-title">In Progress</h2>
       <ul>
         <li>Save slot image</li>
-        <li>Trees (probably new design in the way)</li>
-        <li>Better map generation</li>
+        <li>Trees redesign</li>
+        <li>Map generation</li>
         <li>Improved building</li>
       </ul>
     </section>
 
-    <!-- Known Bugs Section -->
-    <section class="card" aria-labelledby="bugs-title">
-      <h2 id="bugs-title" class="card-title">Known Bugs / Issues</h2>
+    <section class="card">
+      <h2 class="card-title">Known Bugs</h2>
       <ul>
-        <li>Save slot won't display a screenshot of the game, will only show a white box</li>
-        <li>May be a bit laggy when loading into a save game for a while</li>
+        <li>Save image shows white box</li>
+        <li>Lag when loading saves</li>
       </ul>
     </section>
 
-    <!-- Upcoming Features Section -->
-    <section class="card" aria-labelledby="upcoming-title">
-      <h2 id="upcoming-title" class="card-title">Upcoming Features</h2>
+    <section class="card">
+      <h2 class="card-title">Upcoming</h2>
       <ul>
-        <li>Tools (for e.g. axe for mining trees)</li>
-        <li>Local account system (Character customization, naming, extra beta tester features, etc)</li>
+        <li>Tools (axe, etc.)</li>
+        <li>Local accounts</li>
         <li>Better trees</li>
       </ul>
     </section>
+
   </div>
 
 </main>
-
 </body>
 </html>
