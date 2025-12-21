@@ -137,6 +137,19 @@ main.container {
     transition: all 0.2s ease;
 }
 
+/* Hide scrollbar for all browsers */
+body::-webkit-scrollbar {
+    width: 0px;   /* removes scrollbar width for Chrome, Edge, Safari */
+    background: transparent; /* optional: hide background */
+}
+
+body {
+    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+    overflow-y: scroll; /* still allow scrolling */
+}
+
+
 </style>
 
 <main class="container" id="main-content" tabindex="-1">
