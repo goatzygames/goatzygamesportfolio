@@ -1,0 +1,151 @@
+---
+layout: none
+title: Beta Progress
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/style.css" />  
+  <title>Goatzy Games — Beta Progress</title>
+  <meta name="description" content="Beta progress, known bugs, and updates for our mobile game. Designed for beta testers.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Goatzy Games — Beta Progress">
+  <meta property="og:description" content="Beta progress, known bugs, and updates for our mobile game. Designed for beta testers.">
+  <meta property="og:image" content="https://yourwebsite.com/preview-image.png">
+  <meta property="og:url" content="https://goatzy.games/beta">
+</head>
+<body>
+
+    <style>
+/* Import custom font */
+@font-face {
+    font-family: 'Pixellari';
+    src: url('/extras/Pixellari.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Body transparent */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Pixellari', sans-serif;
+    background-color: transparent; /* <-- key for transparency */
+    color: #111111;
+}
+
+/* Container cards with semi-transparent background */
+.card {
+    background-color: rgba(249, 249, 249, 0.85); /* 85% opacity */
+    border: 2px solid rgba(200, 200, 200, 0.5);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+/* Profile / Logo */
+.profile-pic {
+    display: block;
+    max-width: 120px;
+    margin: 0 auto 2rem auto;
+}
+
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #222;
+    text-align: center;
+}
+
+/* Lists */
+ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.8rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+    color: #555;
+    border-top: 1px solid #ddd;
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+    .container {
+        width: 95%;
+        padding: 1rem 0;
+    }
+    .card-title {
+        font-size: 1.3rem;
+    }
+}
+</style>
+
+
+<br>
+<img src="/pics/Goatzy_GamesLogoNOTEXT.png" alt="Goatzy Games Logo" class="profile-pic" style="margin-bottom: 3rem;"/>
+
+<main class="container" id="main-content" tabindex="-1">
+
+  <!-- Progress Section -->
+  <section class="card" aria-labelledby="progress-title">
+    <h2 id="progress-title" class="card-title">In Progress</h2>
+    <ul>
+      <li>Save slot image</li>
+      <li>Trees (probably new design in the way)</li>
+      <li>Better map generation</li>
+      <li>Improved building</li>
+    </ul>
+  </section>
+
+  <!-- Known Bugs Section -->
+  <section class="card" aria-labelledby="bugs-title">
+    <h2 id="bugs-title" class="card-title">Known Bugs / Issues</h2>
+    <ul>
+      <li>Save slot won't display a screenshot of the game, will only show a white box</li>
+      <li>May be a bit laggy when loading into a save game for a while</li>
+    </ul>
+  </section>
+
+  <!-- Upcoming Features Section -->
+  <section class="card" aria-labelledby="upcoming-title">
+    <h2 id="upcoming-title" class="card-title">Upcoming Features</h2>
+    <ul>
+      <li>Tools (for e.g. axe for mining trees)</li>
+      <li>Local account system (Character customization, naming, extra beta tester features, etc)</li>
+      <li>Better trees</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container footer-container">
+    <p>&copy; 2025 Goatzy Games. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
