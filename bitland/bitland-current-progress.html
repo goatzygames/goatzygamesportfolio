@@ -115,40 +115,65 @@ main.container {
     flex: 1 0 auto;         /* Grow to fill remaining space */
 }
 
+.cards-row {
+    display: flex;                /* arrange children side by side */
+    flex-wrap: wrap;              /* wrap to next line on small screens */
+    gap: 1.5rem;                  /* space between cards */
+    justify-content: center;      /* center the row horizontally */
+}
+
+.cards-row .card {
+    flex: 1 1 250px;              /* grow/shrink, min width 250px */
+    max-width: 300px;             /* optional, keeps cards readable */
+    margin-bottom: 1.5rem;
+}
+
+.cards-row .card {
+    background-color: rgba(249, 249, 249, 0.85);
+}
+.cards-row .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.1);
+    transition: all 0.2s ease;
+}
+
 </style>
 
 <main class="container" id="main-content" tabindex="-1">
 
-  <!-- Progress Section -->
-  <section class="card" aria-labelledby="progress-title">
-    <h2 id="progress-title" class="card-title">In Progress</h2>
-    <ul>
-      <li>Save slot image</li>
-      <li>Trees (probably new design in the way)</li>
-      <li>Better map generation</li>
-      <li>Improved building</li>
-    </ul>
-  </section>
+  <div class="cards-row"> <!-- new wrapper for flex -->
+    <!-- Progress Section -->
+    <section class="card" aria-labelledby="progress-title">
+      <h2 id="progress-title" class="card-title">In Progress</h2>
+      <ul>
+        <li>Save slot image</li>
+        <li>Trees (probably new design in the way)</li>
+        <li>Better map generation</li>
+        <li>Improved building</li>
+      </ul>
+    </section>
 
-  <!-- Known Bugs Section -->
-  <section class="card" aria-labelledby="bugs-title">
-    <h2 id="bugs-title" class="card-title">Known Bugs / Issues</h2>
-    <ul>
-      <li>Save slot won't display a screenshot of the game, will only show a white box</li>
-      <li>May be a bit laggy when loading into a save game for a while</li>
-    </ul>
-  </section>
+    <!-- Known Bugs Section -->
+    <section class="card" aria-labelledby="bugs-title">
+      <h2 id="bugs-title" class="card-title">Known Bugs / Issues</h2>
+      <ul>
+        <li>Save slot won't display a screenshot of the game, will only show a white box</li>
+        <li>May be a bit laggy when loading into a save game for a while</li>
+      </ul>
+    </section>
 
-  <!-- Upcoming Features Section -->
-  <section class="card" aria-labelledby="upcoming-title">
-    <h2 id="upcoming-title" class="card-title">Upcoming Features</h2>
-    <ul>
-      <li>Tools (for e.g. axe for mining trees)</li>
-      <li>Local account system (Character customization, naming, extra beta tester features, etc)</li>
-      <li>Better trees</li>
-    </ul>
-  </section>
+    <!-- Upcoming Features Section -->
+    <section class="card" aria-labelledby="upcoming-title">
+      <h2 id="upcoming-title" class="card-title">Upcoming Features</h2>
+      <ul>
+        <li>Tools (for e.g. axe for mining trees)</li>
+        <li>Local account system (Character customization, naming, extra beta tester features, etc)</li>
+        <li>Better trees</li>
+      </ul>
+    </section>
+  </div>
 
 </main>
+
 </body>
 </html>
