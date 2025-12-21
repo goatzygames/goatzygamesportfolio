@@ -10,7 +10,7 @@
     src: url('/extras/Pixellari.ttf') format('truetype');
 }
 
-/* Transparent base for UE */
+/* Transparent base */
 html, body {
     margin: 0;
     padding: 0;
@@ -19,33 +19,34 @@ html, body {
     color: white;
 }
 
-/* Container */
+/* Container positioned left + slightly down */
 .container {
-    width: 100%;
+    position: absolute;
+    top: 24px;        /* small offset from top */
+    left: 24px;       /* small offset from left */
     padding: 8px;
 }
 
-/* Row */
+/* Row aligned left */
 .cards-row {
     display: flex;
-    gap: 12px;
-    justify-content: center;
+    gap: 20px;        /* more space between cards */
+    justify-content: flex-start;
 }
 
-/* Card = simple text block */
+/* Card */
 .card {
-    padding: 6px 8px;
-    max-width: 220px;
+    padding: 8px 10px;
+    max-width: 260px;
 }
 
-/* Outlined text (UE Chromium friendly) */
+/* Outlined text */
 .card-title,
 .card li {
     color: #ffffff;
-    -webkit-text-stroke: 1.5px #000;
+    -webkit-text-stroke: 1.75px #000;
     paint-order: stroke fill;
 
-    /* Fallback outline for safety */
     text-shadow:
         1px 1px 0 #000,
        -1px 1px 0 #000,
@@ -55,9 +56,9 @@ html, body {
 
 /* Title */
 .card-title {
-    font-size: 14px;
-    margin: 0 0 4px 0;
-    text-align: center;
+    font-size: 16px;
+    margin: 0 0 6px 0;
+    text-align: left;
 }
 
 /* List */
@@ -68,12 +69,12 @@ ul {
 }
 
 li {
-    font-size: 11px;
-    line-height: 1.3;
-    margin-bottom: 2px;
+    font-size: 13px;
+    line-height: 1.35;
+    margin-bottom: 3px;
 }
 
-/* No scrollbars in UE */
+/* UE scroll safety */
 body {
     overflow: hidden;
 }
