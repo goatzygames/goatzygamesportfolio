@@ -7,7 +7,7 @@ title: Beta Progress
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=0.5" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="/style.css" />  
   <title>Goatzy Games — Beta Progress</title>
   <meta name="description" content="Beta progress, known bugs, and updates for our mobile game. Designed for beta testers.">
@@ -94,6 +94,27 @@ footer {
         font-size: 1.3rem;
     }
 }
+
+html, body {
+    height: 100%;           /* Make HTML and body fill viewport */
+    margin: 0;
+    padding: 0;
+    font-family: 'Pixellari', sans-serif;
+    background-color: transparent;
+    color: #111111;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;       /* Ensure body is at least full height */
+}
+
+/* Make main container expand to fill height */
+main.container {
+    flex: 1 0 auto;         /* Grow to fill remaining space */
+}
+
 </style>
 
 <main class="container" id="main-content" tabindex="-1">
